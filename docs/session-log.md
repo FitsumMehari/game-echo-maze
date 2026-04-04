@@ -6,3 +6,4 @@
 - polish: menu copy clarity (day 1)
 - test: tile absorption tuning (day 1)
 - shader: spawn pulse on restart (day 1)
+- test: WebGL context lost copy (day 1)
