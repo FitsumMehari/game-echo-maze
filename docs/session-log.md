@@ -8,3 +8,4 @@
 - shader: spawn pulse on restart (day 1)
 - test: WebGL context lost copy (day 1)
 - test: volume ramp on resume (day 1)
+- shader: win/lose overlay timing (day 1)
