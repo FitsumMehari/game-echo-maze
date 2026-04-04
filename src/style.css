@@ -1,0 +1,386 @@
+:root {
+  color-scheme: dark;
+  --bg: #06050c;
+  --panel: rgba(12, 14, 28, 0.94);
+  --text: #eceaf5;
+  --muted: #9b93b3;
+  --accent: #5dffc8;
+  --accent2: #86c4ff;
+  --border: rgba(130, 150, 220, 0.28);
+  font-family:
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    Ubuntu,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+}
+
+#app {
+  width: 100%;
+  min-height: 100svh;
+  margin: 0;
+}
+
+.game-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+}
+
+.game-wrap canvas {
+  display: block;
+  width: 100%;
+  height: 100svh;
+  touch-action: none;
+}
+
+.crosshair {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border: 1px solid rgba(130, 220, 255, 0.45);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  box-shadow: 0 0 12px rgba(100, 200, 255, 0.25);
+}
+
+.crosshair.hidden {
+  display: none;
+}
+
+.hud {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 16px 16px;
+  background: linear-gradient(transparent, rgba(4, 5, 14, 0.88));
+  pointer-events: none;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.45;
+  z-index: 1;
+}
+
+.hud.hidden {
+  display: none;
+}
+
+.hud-meters {
+  max-width: 20rem;
+  margin-bottom: 10px;
+}
+
+.meter-row {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.meter-name {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(180, 195, 255, 0.55);
+}
+
+.meter-name.heat {
+  color: rgba(255, 140, 120, 0.65);
+}
+
+.meter-track {
+  height: 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 4px;
+  transition: width 0.08s linear;
+}
+
+.meter-fill.res {
+  background: linear-gradient(90deg, #4b9dff, #65ffc8);
+  box-shadow: 0 0 12px rgba(100, 255, 200, 0.35);
+}
+
+.meter-fill.debt {
+  background: linear-gradient(90deg, #553311, #ff5533);
+  box-shadow: 0 0 10px rgba(255, 80, 50, 0.35);
+}
+
+.hud-top {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px;
+  max-width: 56rem;
+}
+
+.hud-time {
+  justify-self: start;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  color: var(--accent2);
+}
+
+.hud-sector {
+  justify-self: center;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: rgba(160, 195, 255, 0.42);
+}
+
+.hud-brand {
+  justify-self: end;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(200, 210, 255, 0.35);
+}
+
+.hud-body.hidden {
+  display: none;
+}
+
+.hud-line {
+  margin: 0 0 6px;
+  color: var(--muted);
+}
+
+.hud-tip {
+  margin: 0;
+  max-width: 52rem;
+  color: var(--muted);
+}
+
+.hud kbd {
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.accent {
+  color: var(--accent);
+}
+.accent2 {
+  color: var(--accent2);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(4, 5, 12, 0.76);
+  backdrop-filter: blur(8px);
+  z-index: 4;
+  padding: 20px 16px;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.panel {
+  width: min(460px, 100%);
+  padding: 26px 24px 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  text-align: left;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.panel.hidden {
+  display: none;
+}
+
+.tagline {
+  margin: 0 0 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: rgba(180, 190, 255, 0.45);
+}
+
+.panel h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.85rem, 4.5vw, 2.25rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+}
+
+.panel p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.panel .fine {
+  font-size: 13px;
+}
+
+.stats {
+  font-family: ui-monospace, monospace;
+  font-size: 14px;
+  color: var(--accent2);
+  margin-bottom: 12px !important;
+}
+
+.settings-field {
+  margin: 16px 0 18px;
+  padding: 14px 14px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(120, 140, 200, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.settings-field legend {
+  padding: 0 6px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(200, 205, 240, 0.55);
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.field.tick {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.field input[type="range"] {
+  width: 100%;
+}
+
+.field input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.btn-row.split {
+  justify-content: space-between;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn-primary {
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 650;
+  border: none;
+  border-radius: 10px;
+  color: #06060f;
+  background: linear-gradient(165deg, var(--accent2), var(--accent));
+}
+
+.btn-ghost {
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.btn-text {
+  margin-top: 12px;
+  padding: 8px 0;
+  width: 100%;
+  border: none;
+  background: none;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn-primary:focus-visible,
+.btn-ghost:focus-visible,
+.btn-text:focus-visible {
+  outline: 2px solid var(--accent2);
+  outline-offset: 3px;
+}
+
+.credits {
+  margin: 18px 0 0 !important;
+  font-size: 12px !important;
+  color: rgba(160, 165, 200, 0.55) !important;
+}
+
+.fatal {
+  max-width: 420px;
+  margin: 12vh auto;
+  padding: 28px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.fatal h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.fatal button {
+  margin-top: 16px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  background: linear-gradient(165deg, var(--accent2), var(--accent));
+  color: #06060f;
+}
