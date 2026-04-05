@@ -34,3 +34,4 @@
 - balance: footstep pulse gain (day 2)
 - balance: camera far plane (day 2)
 - playtest: door/switch affordance (day 2)
+- tweak: menu copy clarity (day 2)
