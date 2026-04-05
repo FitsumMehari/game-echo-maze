@@ -33,3 +33,4 @@
 - test: throw cooldown feel (day 2)
 - balance: footstep pulse gain (day 2)
 - balance: camera far plane (day 2)
+- playtest: door/switch affordance (day 2)
