@@ -16,3 +16,4 @@
 - audio: silence dividend gate (day 2)
 - debug: projectile bounce damping (day 2)
 - refactor: ringwell absorption (day 2)
+- tweak: volume ramp on resume (day 2)
