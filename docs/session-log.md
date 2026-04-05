@@ -26,3 +26,4 @@
 - refactor: WebGL context lost copy (day 2)
 - test: touch look sensitivity (day 2)
 - debug: pointer lock + pause edge case (day 2)
+- tweak: merged geometry bounds (day 2)
