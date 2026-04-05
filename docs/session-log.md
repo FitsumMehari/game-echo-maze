@@ -28,3 +28,4 @@
 - debug: pointer lock + pause edge case (day 2)
 - tweak: merged geometry bounds (day 2)
 - wip: throw cooldown feel (day 2)
+- note: decoy wall shader lie (day 2)
