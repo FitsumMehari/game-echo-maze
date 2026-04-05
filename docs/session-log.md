@@ -35,3 +35,4 @@
 - balance: camera far plane (day 2)
 - playtest: door/switch affordance (day 2)
 - tweak: menu copy clarity (day 2)
+- ui: volume ramp on resume (day 2)
