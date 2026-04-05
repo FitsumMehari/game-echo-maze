@@ -22,3 +22,4 @@
 - playtest: hazard reset flow (day 2)
 - test: silence dividend gate (day 2)
 - audio: fog density vs maze size (day 2)
+- playtest: merged geometry bounds (day 2)
