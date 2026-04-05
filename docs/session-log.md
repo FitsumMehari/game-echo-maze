@@ -29,3 +29,4 @@
 - tweak: merged geometry bounds (day 2)
 - wip: throw cooldown feel (day 2)
 - note: decoy wall shader lie (day 2)
+- debug: exit seal denial cue (day 2)
