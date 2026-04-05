@@ -36,3 +36,4 @@
 - playtest: door/switch affordance (day 2)
 - tweak: menu copy clarity (day 2)
 - ui: volume ramp on resume (day 2)
+- test: keyboard repeat guard (day 2)
