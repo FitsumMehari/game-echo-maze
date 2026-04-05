@@ -32,3 +32,4 @@
 - debug: exit seal denial cue (day 2)
 - test: throw cooldown feel (day 2)
 - balance: footstep pulse gain (day 2)
+- balance: camera far plane (day 2)
