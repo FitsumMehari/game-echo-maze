@@ -19,3 +19,4 @@
 - tweak: volume ramp on resume (day 2)
 - polish: sector HUD readability (day 2)
 - note: volume ramp on resume (day 2)
+- playtest: hazard reset flow (day 2)
