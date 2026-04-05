@@ -38,3 +38,4 @@
 - ui: volume ramp on resume (day 2)
 - test: keyboard repeat guard (day 2)
 - balance: ringwell absorption (day 2)
+- shader: WebGL context lost copy (day 2)
