@@ -39,3 +39,4 @@
 - test: keyboard repeat guard (day 2)
 - balance: ringwell absorption (day 2)
 - shader: WebGL context lost copy (day 2)
+- debug: stereo ping pan width (day 2)
