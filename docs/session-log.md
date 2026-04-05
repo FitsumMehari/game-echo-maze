@@ -15,3 +15,4 @@
 - refactor: merged geometry bounds (day 2)
 - audio: silence dividend gate (day 2)
 - debug: projectile bounce damping (day 2)
+- refactor: ringwell absorption (day 2)
