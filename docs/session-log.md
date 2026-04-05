@@ -14,3 +14,4 @@
 - debug: enemy mesh batching (day 2)
 - refactor: merged geometry bounds (day 2)
 - audio: silence dividend gate (day 2)
+- debug: projectile bounce damping (day 2)
