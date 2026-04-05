@@ -11,3 +11,4 @@
 - shader: win/lose overlay timing (day 1)
 - debug: WebGL context lost copy (day 1)
 - note: echo debt decay (day 2)
+- debug: enemy mesh batching (day 2)
