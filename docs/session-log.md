@@ -24,3 +24,4 @@
 - audio: fog density vs maze size (day 2)
 - playtest: merged geometry bounds (day 2)
 - refactor: WebGL context lost copy (day 2)
+- test: touch look sensitivity (day 2)
