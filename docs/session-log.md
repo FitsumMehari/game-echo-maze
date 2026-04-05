@@ -18,3 +18,4 @@
 - refactor: ringwell absorption (day 2)
 - tweak: volume ramp on resume (day 2)
 - polish: sector HUD readability (day 2)
+- note: volume ramp on resume (day 2)
