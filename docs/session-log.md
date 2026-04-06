@@ -46,3 +46,4 @@
 - test: merged geometry bounds (day 3)
 - debug: exit seal denial cue (day 3)
 - test: stereo ping pan width (day 3)
+- wip: keyboard repeat guard (day 3)
