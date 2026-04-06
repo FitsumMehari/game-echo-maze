@@ -56,3 +56,4 @@
 - shader: fog density vs maze size (day 3)
 - note: harmonic twin-ring decay (day 3)
 - playtest: spawn pulse on restart (day 3)
+- refactor: throw cooldown feel (day 3)
