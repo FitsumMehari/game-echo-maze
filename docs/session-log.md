@@ -68,3 +68,4 @@
 - polish: menu copy clarity (day 3)
 - balance: merged geometry bounds (day 3)
 - perf: stereo ping pan width (day 3)
+- playtest: menu copy clarity (day 3)
