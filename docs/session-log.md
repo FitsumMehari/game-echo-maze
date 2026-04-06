@@ -53,3 +53,4 @@
 - tweak: harmonic ping spacing (day 3)
 - tweak: footstep pulse gain (day 3)
 - perf: WebGL context lost copy (day 3)
+- shader: fog density vs maze size (day 3)
