@@ -47,3 +47,4 @@
 - debug: exit seal denial cue (day 3)
 - test: stereo ping pan width (day 3)
 - wip: keyboard repeat guard (day 3)
+- ui: sector HUD readability (day 3)
