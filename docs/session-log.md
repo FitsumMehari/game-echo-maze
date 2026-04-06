@@ -48,3 +48,4 @@
 - test: stereo ping pan width (day 3)
 - wip: keyboard repeat guard (day 3)
 - ui: sector HUD readability (day 3)
+- polish: pointer lock + pause edge case (day 3)
