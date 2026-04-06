@@ -54,3 +54,4 @@
 - tweak: footstep pulse gain (day 3)
 - perf: WebGL context lost copy (day 3)
 - shader: fog density vs maze size (day 3)
+- note: harmonic twin-ring decay (day 3)
