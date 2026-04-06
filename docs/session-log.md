@@ -67,3 +67,4 @@
 - tweak: enemy mesh batching (day 3)
 - polish: menu copy clarity (day 3)
 - balance: merged geometry bounds (day 3)
+- perf: stereo ping pan width (day 3)
