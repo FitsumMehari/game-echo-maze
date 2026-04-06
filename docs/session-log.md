@@ -40,3 +40,4 @@
 - balance: ringwell absorption (day 2)
 - shader: WebGL context lost copy (day 2)
 - debug: stereo ping pan width (day 2)
+- test: door/switch affordance (day 3)
