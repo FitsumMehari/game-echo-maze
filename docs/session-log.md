@@ -45,3 +45,4 @@
 - wip: hunter seek curve (day 3)
 - test: merged geometry bounds (day 3)
 - debug: exit seal denial cue (day 3)
+- test: stereo ping pan width (day 3)
