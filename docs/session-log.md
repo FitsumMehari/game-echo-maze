@@ -50,3 +50,4 @@
 - ui: sector HUD readability (day 3)
 - polish: pointer lock + pause edge case (day 3)
 - note: ringwell absorption (day 3)
+- tweak: harmonic ping spacing (day 3)
