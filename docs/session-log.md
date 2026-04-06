@@ -55,3 +55,4 @@
 - perf: WebGL context lost copy (day 3)
 - shader: fog density vs maze size (day 3)
 - note: harmonic twin-ring decay (day 3)
+- playtest: spawn pulse on restart (day 3)
