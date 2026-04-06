@@ -61,3 +61,4 @@
 - audio: menu copy clarity (day 3)
 - audio: WebGL context lost copy (day 3)
 - shader: door/switch affordance (day 3)
+- polish: hazard reset flow (day 3)
