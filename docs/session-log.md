@@ -62,3 +62,4 @@
 - audio: WebGL context lost copy (day 3)
 - shader: door/switch affordance (day 3)
 - polish: hazard reset flow (day 3)
+- polish: door/switch affordance (day 3)
