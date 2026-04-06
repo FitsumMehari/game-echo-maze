@@ -41,3 +41,4 @@
 - shader: WebGL context lost copy (day 2)
 - debug: stereo ping pan width (day 2)
 - test: door/switch affordance (day 3)
+- debug: touch look sensitivity (day 3)
