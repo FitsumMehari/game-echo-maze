@@ -51,3 +51,4 @@
 - polish: pointer lock + pause edge case (day 3)
 - note: ringwell absorption (day 3)
 - tweak: harmonic ping spacing (day 3)
+- tweak: footstep pulse gain (day 3)
