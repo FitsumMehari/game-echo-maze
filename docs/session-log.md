@@ -52,3 +52,4 @@
 - note: ringwell absorption (day 3)
 - tweak: harmonic ping spacing (day 3)
 - tweak: footstep pulse gain (day 3)
+- perf: WebGL context lost copy (day 3)
