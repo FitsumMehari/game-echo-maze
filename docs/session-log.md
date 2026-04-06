@@ -43,3 +43,4 @@
 - test: door/switch affordance (day 3)
 - debug: touch look sensitivity (day 3)
 - wip: hunter seek curve (day 3)
+- test: merged geometry bounds (day 3)
