@@ -60,3 +60,4 @@
 - ui: mobile drag look (day 3)
 - audio: menu copy clarity (day 3)
 - audio: WebGL context lost copy (day 3)
+- shader: door/switch affordance (day 3)
