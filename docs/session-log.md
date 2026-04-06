@@ -42,3 +42,4 @@
 - debug: stereo ping pan width (day 2)
 - test: door/switch affordance (day 3)
 - debug: touch look sensitivity (day 3)
+- wip: hunter seek curve (day 3)
