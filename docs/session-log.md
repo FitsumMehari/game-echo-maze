@@ -63,3 +63,4 @@
 - shader: door/switch affordance (day 3)
 - polish: hazard reset flow (day 3)
 - polish: door/switch affordance (day 3)
+- shader: decoy wall shader lie (day 3)
