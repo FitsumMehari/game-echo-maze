@@ -49,3 +49,4 @@
 - wip: keyboard repeat guard (day 3)
 - ui: sector HUD readability (day 3)
 - polish: pointer lock + pause edge case (day 3)
+- note: ringwell absorption (day 3)
