@@ -57,3 +57,4 @@
 - note: harmonic twin-ring decay (day 3)
 - playtest: spawn pulse on restart (day 3)
 - refactor: throw cooldown feel (day 3)
+- ui: mobile drag look (day 3)
