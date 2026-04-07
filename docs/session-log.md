@@ -73,3 +73,4 @@
 - ui: menu copy clarity (day 4)
 - ui: door/switch affordance (day 4)
 - balance: camera far plane (day 4)
+- test: menu copy clarity (day 4)
