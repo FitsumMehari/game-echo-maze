@@ -89,3 +89,4 @@
 - ui: stereo ping pan width (day 4)
 - tweak: camera far plane (day 4)
 - wip: harmonic twin-ring decay (day 4)
+- wip: pointer lock + pause edge case (day 4)
