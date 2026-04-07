@@ -70,3 +70,4 @@
 - perf: stereo ping pan width (day 3)
 - playtest: menu copy clarity (day 3)
 - test: WebGL context lost copy (day 3)
+- ui: menu copy clarity (day 4)
