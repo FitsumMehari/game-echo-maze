@@ -88,3 +88,4 @@
 - balance: volume ramp on resume (day 4)
 - ui: stereo ping pan width (day 4)
 - tweak: camera far plane (day 4)
+- wip: harmonic twin-ring decay (day 4)
