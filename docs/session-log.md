@@ -92,3 +92,4 @@
 - wip: pointer lock + pause edge case (day 4)
 - note: hunter seek curve (day 4)
 - polish: resonance charge curve (day 4)
+- balance: tile absorption tuning (day 4)
