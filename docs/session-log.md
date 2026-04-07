@@ -98,3 +98,4 @@
 - shader: camera far plane (day 4)
 - wip: harmonic ping spacing (day 4)
 - tweak: footstep pulse gain (day 4)
+- tweak: touch look sensitivity (day 4)
