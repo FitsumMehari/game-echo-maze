@@ -78,3 +78,4 @@
 - tweak: door/switch affordance (day 4)
 - playtest: camera far plane (day 4)
 - ui: silence dividend gate (day 4)
+- audio: decoy wall shader lie (day 4)
