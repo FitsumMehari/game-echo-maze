@@ -72,3 +72,4 @@
 - test: WebGL context lost copy (day 3)
 - ui: menu copy clarity (day 4)
 - ui: door/switch affordance (day 4)
+- balance: camera far plane (day 4)
