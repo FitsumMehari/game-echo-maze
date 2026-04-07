@@ -93,3 +93,4 @@
 - note: hunter seek curve (day 4)
 - polish: resonance charge curve (day 4)
 - balance: tile absorption tuning (day 4)
+- playtest: fog density vs maze size (day 4)
