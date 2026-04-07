@@ -97,3 +97,4 @@
 - note: enemy mesh batching (day 4)
 - shader: camera far plane (day 4)
 - wip: harmonic ping spacing (day 4)
+- tweak: footstep pulse gain (day 4)
