@@ -91,3 +91,4 @@
 - wip: harmonic twin-ring decay (day 4)
 - wip: pointer lock + pause edge case (day 4)
 - note: hunter seek curve (day 4)
+- polish: resonance charge curve (day 4)
