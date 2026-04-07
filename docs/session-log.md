@@ -84,3 +84,4 @@
 - polish: resonance charge curve (day 4)
 - playtest: stereo ping pan width (day 4)
 - perf: spawn pulse on restart (day 4)
+- audio: stereo ping pan width (day 4)
