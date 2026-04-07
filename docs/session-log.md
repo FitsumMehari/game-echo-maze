@@ -80,3 +80,4 @@
 - ui: silence dividend gate (day 4)
 - audio: decoy wall shader lie (day 4)
 - polish: hazard reset flow (day 4)
+- perf: harmonic twin-ring decay (day 4)
