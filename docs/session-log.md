@@ -82,3 +82,4 @@
 - polish: hazard reset flow (day 4)
 - perf: harmonic twin-ring decay (day 4)
 - polish: resonance charge curve (day 4)
+- playtest: stereo ping pan width (day 4)
