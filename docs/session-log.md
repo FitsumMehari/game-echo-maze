@@ -125,3 +125,4 @@
 - wip: resonance charge curve (day 5)
 - wip: echo debt decay (day 5)
 - wip: stereo ping pan width (day 5)
+- ui: pointer lock + pause edge case (day 5)
