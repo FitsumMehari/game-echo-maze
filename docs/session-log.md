@@ -116,3 +116,4 @@
 - balance: camera far plane (day 5)
 - test: silence dividend gate (day 5)
 - test: pointer lock + pause edge case (day 5)
+- shader: menu copy clarity (day 5)
