@@ -120,3 +120,4 @@
 - note: footstep pulse gain (day 5)
 - perf: hunter seek curve (day 5)
 - ui: sector HUD readability (day 5)
+- ui: volume ramp on resume (day 5)
