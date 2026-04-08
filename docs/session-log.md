@@ -123,3 +123,4 @@
 - ui: volume ramp on resume (day 5)
 - debug: win/lose overlay timing (day 5)
 - wip: resonance charge curve (day 5)
+- wip: echo debt decay (day 5)
