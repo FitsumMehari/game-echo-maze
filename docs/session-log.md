@@ -104,3 +104,4 @@
 - audio: hunter seek curve (day 5)
 - polish: pointer lock + pause edge case (day 5)
 - refactor: stereo ping pan width (day 5)
+- playtest: harmonic ping spacing (day 5)
