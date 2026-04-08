@@ -108,3 +108,4 @@
 - ui: sector HUD readability (day 5)
 - note: hunter seek curve (day 5)
 - balance: WebGL context lost copy (day 5)
+- debug: win/lose overlay timing (day 5)
