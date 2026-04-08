@@ -106,3 +106,4 @@
 - refactor: stereo ping pan width (day 5)
 - playtest: harmonic ping spacing (day 5)
 - ui: sector HUD readability (day 5)
+- note: hunter seek curve (day 5)
