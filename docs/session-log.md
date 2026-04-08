@@ -121,3 +121,4 @@
 - perf: hunter seek curve (day 5)
 - ui: sector HUD readability (day 5)
 - ui: volume ramp on resume (day 5)
+- debug: win/lose overlay timing (day 5)
