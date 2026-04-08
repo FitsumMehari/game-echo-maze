@@ -102,3 +102,4 @@
 - ui: WebGL context lost copy (day 4)
 - debug: footstep pulse gain (day 5)
 - audio: hunter seek curve (day 5)
+- polish: pointer lock + pause edge case (day 5)
