@@ -113,3 +113,4 @@
 - refactor: spawn pulse on restart (day 5)
 - polish: tile absorption tuning (day 5)
 - balance: pointer lock + pause edge case (day 5)
+- balance: camera far plane (day 5)
