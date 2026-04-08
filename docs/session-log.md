@@ -100,3 +100,4 @@
 - tweak: footstep pulse gain (day 4)
 - tweak: touch look sensitivity (day 4)
 - ui: WebGL context lost copy (day 4)
+- debug: footstep pulse gain (day 5)
