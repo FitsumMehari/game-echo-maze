@@ -141,3 +141,4 @@
 - balance: decoy wall shader lie (day 6)
 - audio: keyboard repeat guard (day 6)
 - test: pointer lock + pause edge case (day 6)
+- ui: stereo ping pan width (day 6)
