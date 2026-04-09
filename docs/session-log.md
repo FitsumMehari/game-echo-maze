@@ -154,3 +154,4 @@
 - test: keyboard repeat guard (day 6)
 - playtest: WebGL context lost copy (day 6)
 - refactor: decoy wall shader lie (day 6)
+- playtest: silence dividend gate (day 6)
