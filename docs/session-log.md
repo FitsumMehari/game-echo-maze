@@ -156,3 +156,4 @@
 - refactor: decoy wall shader lie (day 6)
 - playtest: silence dividend gate (day 6)
 - note: exit seal denial cue (day 6)
+- audio: enemy mesh batching (day 6)
