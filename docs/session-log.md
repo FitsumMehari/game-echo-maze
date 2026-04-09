@@ -130,3 +130,4 @@
 - audio: win/lose overlay timing (day 5)
 - wip: keyboard repeat guard (day 5)
 - perf: footstep pulse gain (day 5)
+- audio: ringwell absorption (day 6)
