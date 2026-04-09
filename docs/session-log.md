@@ -152,3 +152,4 @@
 - balance: keyboard repeat guard (day 6)
 - test: throw cooldown feel (day 6)
 - test: keyboard repeat guard (day 6)
+- playtest: WebGL context lost copy (day 6)
