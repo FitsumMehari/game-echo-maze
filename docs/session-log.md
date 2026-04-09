@@ -144,3 +144,4 @@
 - ui: stereo ping pan width (day 6)
 - playtest: merged geometry bounds (day 6)
 - polish: ringwell absorption (day 6)
+- tweak: harmonic ping spacing (day 6)
