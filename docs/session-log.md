@@ -138,3 +138,4 @@
 - wip: menu copy clarity (day 6)
 - playtest: win/lose overlay timing (day 6)
 - shader: enemy mesh batching (day 6)
+- balance: decoy wall shader lie (day 6)
