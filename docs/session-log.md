@@ -159,3 +159,4 @@
 - audio: enemy mesh batching (day 6)
 - balance: footstep pulse gain (day 6)
 - debug: mobile drag look (day 6)
+- audio: sector HUD readability (day 6)
