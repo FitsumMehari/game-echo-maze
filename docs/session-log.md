@@ -151,3 +151,4 @@
 - debug: exit seal denial cue (day 6)
 - balance: keyboard repeat guard (day 6)
 - test: throw cooldown feel (day 6)
+- test: keyboard repeat guard (day 6)
