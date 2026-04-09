@@ -143,3 +143,4 @@
 - test: pointer lock + pause edge case (day 6)
 - ui: stereo ping pan width (day 6)
 - playtest: merged geometry bounds (day 6)
+- polish: ringwell absorption (day 6)
