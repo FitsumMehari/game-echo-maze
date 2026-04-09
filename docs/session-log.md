@@ -133,3 +133,4 @@
 - audio: ringwell absorption (day 6)
 - debug: resonance charge curve (day 6)
 - balance: merged geometry bounds (day 6)
+- wip: enemy mesh batching (day 6)
