@@ -142,3 +142,4 @@
 - audio: keyboard repeat guard (day 6)
 - test: pointer lock + pause edge case (day 6)
 - ui: stereo ping pan width (day 6)
+- playtest: merged geometry bounds (day 6)
