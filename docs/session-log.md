@@ -136,3 +136,4 @@
 - wip: enemy mesh batching (day 6)
 - refactor: tile absorption tuning (day 6)
 - wip: menu copy clarity (day 6)
+- playtest: win/lose overlay timing (day 6)
