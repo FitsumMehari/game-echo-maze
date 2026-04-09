@@ -149,3 +149,4 @@
 - tweak: pointer lock + pause edge case (day 6)
 - polish: resonance charge curve (day 6)
 - debug: exit seal denial cue (day 6)
+- balance: keyboard repeat guard (day 6)
