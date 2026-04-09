@@ -147,3 +147,4 @@
 - tweak: harmonic ping spacing (day 6)
 - shader: tile absorption tuning (day 6)
 - tweak: pointer lock + pause edge case (day 6)
+- polish: resonance charge curve (day 6)
