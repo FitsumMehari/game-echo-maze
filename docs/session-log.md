@@ -145,3 +145,4 @@
 - playtest: merged geometry bounds (day 6)
 - polish: ringwell absorption (day 6)
 - tweak: harmonic ping spacing (day 6)
+- shader: tile absorption tuning (day 6)
