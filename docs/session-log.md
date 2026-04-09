@@ -153,3 +153,4 @@
 - test: throw cooldown feel (day 6)
 - test: keyboard repeat guard (day 6)
 - playtest: WebGL context lost copy (day 6)
+- refactor: decoy wall shader lie (day 6)
