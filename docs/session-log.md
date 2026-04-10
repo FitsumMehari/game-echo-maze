@@ -161,3 +161,4 @@
 - debug: mobile drag look (day 6)
 - audio: sector HUD readability (day 6)
 - shader: mobile drag look (day 7)
+- wip: echo debt decay (day 7)
