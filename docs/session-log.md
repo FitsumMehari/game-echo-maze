@@ -168,3 +168,4 @@
 - tweak: ringwell absorption (day 7)
 - wip: harmonic ping spacing (day 7)
 - audio: exit seal denial cue (day 7)
+- tweak: camera far plane (day 7)
