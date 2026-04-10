@@ -163,3 +163,4 @@
 - shader: mobile drag look (day 7)
 - wip: echo debt decay (day 7)
 - balance: resonance charge curve (day 7)
+- balance: stereo ping pan width (day 7)
