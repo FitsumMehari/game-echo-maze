@@ -188,3 +188,4 @@
 - ui: throw cooldown feel (day 7)
 - perf: fog density vs maze size (day 7)
 - audio: decoy wall shader lie (day 7)
+- debug: pointer lock + pause edge case (day 7)
