@@ -170,3 +170,4 @@
 - audio: exit seal denial cue (day 7)
 - tweak: camera far plane (day 7)
 - note: decoy wall shader lie (day 7)
+- polish: merged geometry bounds (day 7)
