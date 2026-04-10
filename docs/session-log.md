@@ -174,3 +174,4 @@
 - note: decoy wall shader lie (day 7)
 - refactor: hazard reset flow (day 7)
 - tweak: hazard reset flow (day 7)
+- tweak: WebGL context lost copy (day 7)
