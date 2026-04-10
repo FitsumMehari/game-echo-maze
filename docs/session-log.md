@@ -160,3 +160,4 @@
 - balance: footstep pulse gain (day 6)
 - debug: mobile drag look (day 6)
 - audio: sector HUD readability (day 6)
+- shader: mobile drag look (day 7)
