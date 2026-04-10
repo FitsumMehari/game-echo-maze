@@ -184,3 +184,4 @@
 - polish: spawn pulse on restart (day 7)
 - balance: spawn pulse on restart (day 7)
 - balance: echo debt decay (day 7)
+- polish: WebGL context lost copy (day 7)
