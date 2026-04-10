@@ -176,3 +176,4 @@
 - tweak: hazard reset flow (day 7)
 - tweak: WebGL context lost copy (day 7)
 - balance: harmonic ping spacing (day 7)
+- test: decoy wall shader lie (day 7)
