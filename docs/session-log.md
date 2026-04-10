@@ -165,3 +165,4 @@
 - balance: resonance charge curve (day 7)
 - balance: stereo ping pan width (day 7)
 - balance: spawn pulse on restart (day 7)
+- tweak: ringwell absorption (day 7)
