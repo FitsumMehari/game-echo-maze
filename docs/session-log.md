@@ -166,3 +166,4 @@
 - balance: stereo ping pan width (day 7)
 - balance: spawn pulse on restart (day 7)
 - tweak: ringwell absorption (day 7)
+- wip: harmonic ping spacing (day 7)
