@@ -177,3 +177,4 @@
 - tweak: WebGL context lost copy (day 7)
 - balance: harmonic ping spacing (day 7)
 - test: decoy wall shader lie (day 7)
+- debug: WebGL context lost copy (day 7)
