@@ -186,3 +186,4 @@
 - balance: echo debt decay (day 7)
 - polish: WebGL context lost copy (day 7)
 - ui: throw cooldown feel (day 7)
+- perf: fog density vs maze size (day 7)
