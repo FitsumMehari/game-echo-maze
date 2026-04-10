@@ -182,3 +182,4 @@
 - polish: projectile bounce damping (day 7)
 - tweak: pointer lock + pause edge case (day 7)
 - polish: spawn pulse on restart (day 7)
+- balance: spawn pulse on restart (day 7)
