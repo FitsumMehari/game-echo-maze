@@ -162,3 +162,4 @@
 - audio: sector HUD readability (day 6)
 - shader: mobile drag look (day 7)
 - wip: echo debt decay (day 7)
+- balance: resonance charge curve (day 7)
