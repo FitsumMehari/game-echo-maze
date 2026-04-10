@@ -175,3 +175,4 @@
 - refactor: hazard reset flow (day 7)
 - tweak: hazard reset flow (day 7)
 - tweak: WebGL context lost copy (day 7)
+- balance: harmonic ping spacing (day 7)
