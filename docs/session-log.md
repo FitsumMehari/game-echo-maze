@@ -195,3 +195,4 @@
 - wip: mobile drag look (day 8)
 - balance: merged geometry bounds (day 8)
 - perf: WebGL context lost copy (day 8)
+- audio: sector HUD readability (day 8)
