@@ -197,3 +197,4 @@
 - perf: WebGL context lost copy (day 8)
 - audio: sector HUD readability (day 8)
 - debug: fog density vs maze size (day 8)
+- note: menu copy clarity (day 8)
