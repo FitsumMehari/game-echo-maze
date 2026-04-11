@@ -190,3 +190,4 @@
 - audio: decoy wall shader lie (day 7)
 - debug: pointer lock + pause edge case (day 7)
 - test: hazard reset flow (day 7)
+- test: touch look sensitivity (day 8)
