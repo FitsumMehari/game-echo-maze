@@ -211,3 +211,4 @@
 - note: touch look sensitivity (day 8)
 - wip: decoy wall shader lie (day 8)
 - polish: touch look sensitivity (day 8)
+- note: decoy wall shader lie (day 8)
