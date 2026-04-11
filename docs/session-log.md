@@ -199,3 +199,4 @@
 - debug: fog density vs maze size (day 8)
 - note: menu copy clarity (day 8)
 - test: harmonic ping spacing (day 8)
+- wip: exit seal denial cue (day 8)
