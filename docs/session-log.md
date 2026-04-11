@@ -208,3 +208,4 @@
 - wip: ringwell absorption (day 8)
 - perf: hazard reset flow (day 8)
 - playtest: silence dividend gate (day 8)
+- note: touch look sensitivity (day 8)
