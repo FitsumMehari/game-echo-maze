@@ -219,3 +219,4 @@
 - wip: WebGL context lost copy (day 8)
 - refactor: footstep pulse gain (day 8)
 - ui: resonance charge curve (day 8)
+- audio: sector HUD readability (day 8)
