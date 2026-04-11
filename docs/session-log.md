@@ -202,3 +202,4 @@
 - wip: exit seal denial cue (day 8)
 - debug: spawn pulse on restart (day 8)
 - refactor: resonance charge curve (day 8)
+- note: volume ramp on resume (day 8)
