@@ -215,3 +215,4 @@
 - debug: sector HUD readability (day 8)
 - perf: pointer lock + pause edge case (day 8)
 - ui: touch look sensitivity (day 8)
+- balance: stereo ping pan width (day 8)
