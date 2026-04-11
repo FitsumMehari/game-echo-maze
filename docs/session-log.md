@@ -203,3 +203,4 @@
 - debug: spawn pulse on restart (day 8)
 - refactor: resonance charge curve (day 8)
 - note: volume ramp on resume (day 8)
+- test: keyboard repeat guard (day 8)
