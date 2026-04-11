@@ -217,3 +217,4 @@
 - ui: touch look sensitivity (day 8)
 - balance: stereo ping pan width (day 8)
 - wip: WebGL context lost copy (day 8)
+- refactor: footstep pulse gain (day 8)
