@@ -209,3 +209,4 @@
 - perf: hazard reset flow (day 8)
 - playtest: silence dividend gate (day 8)
 - note: touch look sensitivity (day 8)
+- wip: decoy wall shader lie (day 8)
