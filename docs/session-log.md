@@ -193,3 +193,4 @@
 - test: touch look sensitivity (day 8)
 - debug: exit seal denial cue (day 8)
 - wip: mobile drag look (day 8)
+- balance: merged geometry bounds (day 8)
