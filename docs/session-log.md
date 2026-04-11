@@ -205,3 +205,4 @@
 - note: volume ramp on resume (day 8)
 - test: keyboard repeat guard (day 8)
 - refactor: echo debt decay (day 8)
+- wip: ringwell absorption (day 8)
