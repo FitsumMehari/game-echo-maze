@@ -192,3 +192,4 @@
 - test: hazard reset flow (day 7)
 - test: touch look sensitivity (day 8)
 - debug: exit seal denial cue (day 8)
+- wip: mobile drag look (day 8)
