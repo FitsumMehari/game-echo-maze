@@ -248,3 +248,4 @@
 - test: menu copy clarity (day 9)
 - shader: decoy wall shader lie (day 9)
 - playtest: throw cooldown feel (day 9)
+- wip: hunter seek curve (day 9)
