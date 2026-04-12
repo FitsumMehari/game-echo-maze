@@ -229,3 +229,4 @@
 - note: WebGL context lost copy (day 9)
 - wip: harmonic twin-ring decay (day 9)
 - polish: enemy mesh batching (day 9)
+- balance: spawn pulse on restart (day 9)
