@@ -240,3 +240,4 @@
 - polish: tile absorption tuning (day 9)
 - ui: hunter seek curve (day 9)
 - balance: menu copy clarity (day 9)
+- playtest: mobile drag look (day 9)
