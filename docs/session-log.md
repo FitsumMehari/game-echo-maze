@@ -223,3 +223,4 @@
 - perf: ringwell absorption (day 9)
 - debug: menu copy clarity (day 9)
 - shader: sector HUD readability (day 9)
+- ui: projectile bounce damping (day 9)
