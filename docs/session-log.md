@@ -232,3 +232,4 @@
 - balance: spawn pulse on restart (day 9)
 - ui: throw cooldown feel (day 9)
 - wip: pointer lock + pause edge case (day 9)
+- ui: mobile drag look (day 9)
