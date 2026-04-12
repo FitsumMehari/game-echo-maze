@@ -245,3 +245,4 @@
 - perf: spawn pulse on restart (day 9)
 - tweak: projectile bounce damping (day 9)
 - perf: hunter seek curve (day 9)
+- test: menu copy clarity (day 9)
