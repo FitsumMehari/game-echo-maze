@@ -243,3 +243,4 @@
 - playtest: mobile drag look (day 9)
 - audio: menu copy clarity (day 9)
 - perf: spawn pulse on restart (day 9)
+- tweak: projectile bounce damping (day 9)
