@@ -220,3 +220,4 @@
 - refactor: footstep pulse gain (day 8)
 - ui: resonance charge curve (day 8)
 - audio: sector HUD readability (day 8)
+- perf: ringwell absorption (day 9)
