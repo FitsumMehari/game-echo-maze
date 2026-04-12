@@ -222,3 +222,4 @@
 - audio: sector HUD readability (day 8)
 - perf: ringwell absorption (day 9)
 - debug: menu copy clarity (day 9)
+- shader: sector HUD readability (day 9)
