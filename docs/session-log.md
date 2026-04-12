@@ -234,3 +234,4 @@
 - wip: pointer lock + pause edge case (day 9)
 - ui: mobile drag look (day 9)
 - shader: ringwell absorption (day 9)
+- polish: silence dividend gate (day 9)
