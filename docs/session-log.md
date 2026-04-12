@@ -225,3 +225,4 @@
 - shader: sector HUD readability (day 9)
 - ui: projectile bounce damping (day 9)
 - ui: door/switch affordance (day 9)
+- note: touch look sensitivity (day 9)
