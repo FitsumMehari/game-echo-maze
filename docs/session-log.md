@@ -231,3 +231,4 @@
 - polish: enemy mesh batching (day 9)
 - balance: spawn pulse on restart (day 9)
 - ui: throw cooldown feel (day 9)
+- wip: pointer lock + pause edge case (day 9)
