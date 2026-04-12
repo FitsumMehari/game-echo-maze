@@ -227,3 +227,4 @@
 - ui: door/switch affordance (day 9)
 - note: touch look sensitivity (day 9)
 - note: WebGL context lost copy (day 9)
+- wip: harmonic twin-ring decay (day 9)
