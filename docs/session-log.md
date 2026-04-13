@@ -266,3 +266,4 @@
 - refactor: hazard reset flow (day 10)
 - playtest: spawn pulse on restart (day 10)
 - shader: door/switch affordance (day 10)
+- note: keyboard repeat guard (day 10)
