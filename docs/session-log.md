@@ -261,3 +261,4 @@
 - audio: touch look sensitivity (day 10)
 - refactor: volume ramp on resume (day 10)
 - refactor: WebGL context lost copy (day 10)
+- test: stereo ping pan width (day 10)
