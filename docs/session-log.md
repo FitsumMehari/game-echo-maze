@@ -272,3 +272,4 @@
 - perf: touch look sensitivity (day 10)
 - balance: merged geometry bounds (day 10)
 - note: keyboard repeat guard (day 10)
+- polish: harmonic twin-ring decay (day 10)
