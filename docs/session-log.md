@@ -257,3 +257,4 @@
 - tweak: spawn pulse on restart (day 10)
 - ui: menu copy clarity (day 10)
 - shader: merged geometry bounds (day 10)
+- refactor: mobile drag look (day 10)
