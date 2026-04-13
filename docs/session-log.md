@@ -253,3 +253,4 @@
 - refactor: echo debt decay (day 10)
 - debug: stereo ping pan width (day 10)
 - wip: harmonic twin-ring decay (day 10)
+- ui: echo debt decay (day 10)
