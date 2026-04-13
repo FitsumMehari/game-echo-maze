@@ -256,3 +256,4 @@
 - ui: echo debt decay (day 10)
 - tweak: spawn pulse on restart (day 10)
 - ui: menu copy clarity (day 10)
+- shader: merged geometry bounds (day 10)
