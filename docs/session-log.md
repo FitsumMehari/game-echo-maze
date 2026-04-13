@@ -265,3 +265,4 @@
 - audio: projectile bounce damping (day 10)
 - refactor: hazard reset flow (day 10)
 - playtest: spawn pulse on restart (day 10)
+- shader: door/switch affordance (day 10)
