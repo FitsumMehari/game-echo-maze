@@ -260,3 +260,4 @@
 - refactor: mobile drag look (day 10)
 - audio: touch look sensitivity (day 10)
 - refactor: volume ramp on resume (day 10)
+- refactor: WebGL context lost copy (day 10)
