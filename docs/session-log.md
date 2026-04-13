@@ -259,3 +259,4 @@
 - shader: merged geometry bounds (day 10)
 - refactor: mobile drag look (day 10)
 - audio: touch look sensitivity (day 10)
+- refactor: volume ramp on resume (day 10)
