@@ -274,3 +274,4 @@
 - note: keyboard repeat guard (day 10)
 - polish: harmonic twin-ring decay (day 10)
 - polish: projectile bounce damping (day 10)
+- playtest: decoy wall shader lie (day 10)
