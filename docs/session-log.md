@@ -254,3 +254,4 @@
 - debug: stereo ping pan width (day 10)
 - wip: harmonic twin-ring decay (day 10)
 - ui: echo debt decay (day 10)
+- tweak: spawn pulse on restart (day 10)
