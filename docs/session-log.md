@@ -258,3 +258,4 @@
 - ui: menu copy clarity (day 10)
 - shader: merged geometry bounds (day 10)
 - refactor: mobile drag look (day 10)
+- audio: touch look sensitivity (day 10)
