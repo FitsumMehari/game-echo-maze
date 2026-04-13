@@ -276,3 +276,4 @@
 - polish: projectile bounce damping (day 10)
 - playtest: decoy wall shader lie (day 10)
 - note: touch look sensitivity (day 10)
+- polish: spawn pulse on restart (day 10)
