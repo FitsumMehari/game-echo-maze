@@ -255,3 +255,4 @@
 - wip: harmonic twin-ring decay (day 10)
 - ui: echo debt decay (day 10)
 - tweak: spawn pulse on restart (day 10)
+- ui: menu copy clarity (day 10)
