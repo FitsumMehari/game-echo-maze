@@ -279,3 +279,4 @@
 - polish: spawn pulse on restart (day 10)
 - balance: resonance charge curve (day 10)
 - playtest: volume ramp on resume (day 10)
+- wip: ringwell absorption (day 10)
