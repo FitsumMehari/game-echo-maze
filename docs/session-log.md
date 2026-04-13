@@ -278,3 +278,4 @@
 - note: touch look sensitivity (day 10)
 - polish: spawn pulse on restart (day 10)
 - balance: resonance charge curve (day 10)
+- playtest: volume ramp on resume (day 10)
