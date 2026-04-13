@@ -262,3 +262,4 @@
 - refactor: volume ramp on resume (day 10)
 - refactor: WebGL context lost copy (day 10)
 - test: stereo ping pan width (day 10)
+- audio: projectile bounce damping (day 10)
