@@ -250,3 +250,4 @@
 - playtest: throw cooldown feel (day 9)
 - wip: hunter seek curve (day 9)
 - audio: decoy wall shader lie (day 9)
+- refactor: echo debt decay (day 10)
