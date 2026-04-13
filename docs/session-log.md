@@ -269,3 +269,4 @@
 - note: keyboard repeat guard (day 10)
 - balance: hazard reset flow (day 10)
 - wip: win/lose overlay timing (day 10)
+- perf: touch look sensitivity (day 10)
