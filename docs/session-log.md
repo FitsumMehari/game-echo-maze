@@ -296,3 +296,4 @@
 - debug: WebGL context lost copy (day 11)
 - test: volume ramp on resume (day 11)
 - test: mobile drag look (day 11)
+- balance: hazard reset flow (day 11)
