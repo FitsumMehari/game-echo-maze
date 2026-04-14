@@ -297,3 +297,4 @@
 - test: volume ramp on resume (day 11)
 - test: mobile drag look (day 11)
 - balance: hazard reset flow (day 11)
+- polish: keyboard repeat guard (day 11)
