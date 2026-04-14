@@ -288,3 +288,4 @@
 - audio: mobile drag look (day 11)
 - refactor: WebGL context lost copy (day 11)
 - shader: merged geometry bounds (day 11)
+- test: menu copy clarity (day 11)
