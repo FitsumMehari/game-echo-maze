@@ -309,3 +309,4 @@
 - test: hunter seek curve (day 11)
 - balance: echo debt decay (day 11)
 - ui: hunter seek curve (day 11)
+- refactor: sector HUD readability (day 11)
