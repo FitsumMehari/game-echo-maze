@@ -295,3 +295,4 @@
 - polish: camera far plane (day 11)
 - debug: WebGL context lost copy (day 11)
 - test: volume ramp on resume (day 11)
+- test: mobile drag look (day 11)
