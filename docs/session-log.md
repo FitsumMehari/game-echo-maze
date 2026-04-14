@@ -299,3 +299,4 @@
 - balance: hazard reset flow (day 11)
 - polish: keyboard repeat guard (day 11)
 - shader: mobile drag look (day 11)
+- audio: door/switch affordance (day 11)
