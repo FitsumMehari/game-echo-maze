@@ -280,3 +280,4 @@
 - balance: resonance charge curve (day 10)
 - playtest: volume ramp on resume (day 10)
 - wip: ringwell absorption (day 10)
+- shader: decoy wall shader lie (day 11)
