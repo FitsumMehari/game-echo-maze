@@ -305,3 +305,4 @@
 - test: volume ramp on resume (day 11)
 - audio: door/switch affordance (day 11)
 - wip: camera far plane (day 11)
+- balance: ringwell absorption (day 11)
