@@ -291,3 +291,4 @@
 - test: menu copy clarity (day 11)
 - refactor: win/lose overlay timing (day 11)
 - playtest: hunter seek curve (day 11)
+- audio: echo debt decay (day 11)
