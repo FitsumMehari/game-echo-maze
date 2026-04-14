@@ -287,3 +287,4 @@
 - tweak: tile absorption tuning (day 11)
 - audio: mobile drag look (day 11)
 - refactor: WebGL context lost copy (day 11)
+- shader: merged geometry bounds (day 11)
