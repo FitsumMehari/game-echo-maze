@@ -286,3 +286,4 @@
 - wip: menu copy clarity (day 11)
 - tweak: tile absorption tuning (day 11)
 - audio: mobile drag look (day 11)
+- refactor: WebGL context lost copy (day 11)
