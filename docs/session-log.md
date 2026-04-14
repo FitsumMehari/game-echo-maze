@@ -302,3 +302,4 @@
 - audio: door/switch affordance (day 11)
 - balance: silence dividend gate (day 11)
 - tweak: merged geometry bounds (day 11)
+- test: volume ramp on resume (day 11)
