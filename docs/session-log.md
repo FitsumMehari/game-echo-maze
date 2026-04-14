@@ -289,3 +289,4 @@
 - refactor: WebGL context lost copy (day 11)
 - shader: merged geometry bounds (day 11)
 - test: menu copy clarity (day 11)
+- refactor: win/lose overlay timing (day 11)
