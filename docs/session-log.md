@@ -307,3 +307,4 @@
 - wip: camera far plane (day 11)
 - balance: ringwell absorption (day 11)
 - test: hunter seek curve (day 11)
+- balance: echo debt decay (day 11)
