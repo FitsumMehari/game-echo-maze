@@ -306,3 +306,4 @@
 - audio: door/switch affordance (day 11)
 - wip: camera far plane (day 11)
 - balance: ringwell absorption (day 11)
+- test: hunter seek curve (day 11)
