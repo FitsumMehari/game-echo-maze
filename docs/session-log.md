@@ -292,3 +292,4 @@
 - refactor: win/lose overlay timing (day 11)
 - playtest: hunter seek curve (day 11)
 - audio: echo debt decay (day 11)
+- polish: camera far plane (day 11)
