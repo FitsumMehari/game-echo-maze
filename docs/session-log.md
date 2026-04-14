@@ -284,3 +284,4 @@
 - playtest: resonance charge curve (day 11)
 - shader: spawn pulse on restart (day 11)
 - wip: menu copy clarity (day 11)
+- tweak: tile absorption tuning (day 11)
