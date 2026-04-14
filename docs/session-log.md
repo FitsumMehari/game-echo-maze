@@ -285,3 +285,4 @@
 - shader: spawn pulse on restart (day 11)
 - wip: menu copy clarity (day 11)
 - tweak: tile absorption tuning (day 11)
+- audio: mobile drag look (day 11)
