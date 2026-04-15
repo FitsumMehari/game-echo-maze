@@ -338,3 +338,4 @@
 - wip: projectile bounce damping (day 12)
 - polish: hunter seek curve (day 12)
 - debug: menu copy clarity (day 12)
+- ui: decoy wall shader lie (day 12)
