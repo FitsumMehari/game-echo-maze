@@ -315,3 +315,4 @@
 - test: echo debt decay (day 12)
 - wip: throw cooldown feel (day 12)
 - polish: echo debt decay (day 12)
+- debug: keyboard repeat guard (day 12)
