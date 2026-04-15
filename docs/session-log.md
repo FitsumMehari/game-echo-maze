@@ -322,3 +322,4 @@
 - balance: sector HUD readability (day 12)
 - test: stereo ping pan width (day 12)
 - debug: mobile drag look (day 12)
+- refactor: enemy mesh batching (day 12)
