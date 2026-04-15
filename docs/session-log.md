@@ -325,3 +325,4 @@
 - refactor: enemy mesh batching (day 12)
 - test: win/lose overlay timing (day 12)
 - tweak: door/switch affordance (day 12)
+- playtest: camera far plane (day 12)
