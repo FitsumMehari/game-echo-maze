@@ -311,3 +311,4 @@
 - ui: hunter seek curve (day 11)
 - refactor: sector HUD readability (day 11)
 - ui: ringwell absorption (day 12)
+- refactor: stereo ping pan width (day 12)
