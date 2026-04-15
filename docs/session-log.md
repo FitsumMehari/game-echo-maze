@@ -337,3 +337,4 @@
 - note: echo debt decay (day 12)
 - wip: projectile bounce damping (day 12)
 - polish: hunter seek curve (day 12)
+- debug: menu copy clarity (day 12)
