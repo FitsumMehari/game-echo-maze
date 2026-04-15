@@ -317,3 +317,4 @@
 - polish: echo debt decay (day 12)
 - debug: keyboard repeat guard (day 12)
 - shader: volume ramp on resume (day 12)
+- debug: harmonic twin-ring decay (day 12)
