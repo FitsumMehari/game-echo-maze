@@ -334,3 +334,4 @@
 - audio: exit seal denial cue (day 12)
 - perf: tile absorption tuning (day 12)
 - refactor: projectile bounce damping (day 12)
+- note: echo debt decay (day 12)
