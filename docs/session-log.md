@@ -335,3 +335,4 @@
 - perf: tile absorption tuning (day 12)
 - refactor: projectile bounce damping (day 12)
 - note: echo debt decay (day 12)
+- wip: projectile bounce damping (day 12)
