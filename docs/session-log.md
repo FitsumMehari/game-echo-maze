@@ -314,3 +314,4 @@
 - refactor: stereo ping pan width (day 12)
 - test: echo debt decay (day 12)
 - wip: throw cooldown feel (day 12)
+- polish: echo debt decay (day 12)
