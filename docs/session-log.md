@@ -329,3 +329,4 @@
 - note: fog density vs maze size (day 12)
 - playtest: keyboard repeat guard (day 12)
 - audio: keyboard repeat guard (day 12)
+- playtest: decoy wall shader lie (day 12)
