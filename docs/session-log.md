@@ -312,3 +312,4 @@
 - refactor: sector HUD readability (day 11)
 - ui: ringwell absorption (day 12)
 - refactor: stereo ping pan width (day 12)
+- test: echo debt decay (day 12)
