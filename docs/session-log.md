@@ -318,3 +318,4 @@
 - debug: keyboard repeat guard (day 12)
 - shader: volume ramp on resume (day 12)
 - debug: harmonic twin-ring decay (day 12)
+- refactor: silence dividend gate (day 12)
