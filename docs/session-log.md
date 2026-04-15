@@ -333,3 +333,4 @@
 - polish: keyboard repeat guard (day 12)
 - audio: exit seal denial cue (day 12)
 - perf: tile absorption tuning (day 12)
+- refactor: projectile bounce damping (day 12)
