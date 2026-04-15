@@ -327,3 +327,4 @@
 - tweak: door/switch affordance (day 12)
 - playtest: camera far plane (day 12)
 - note: fog density vs maze size (day 12)
+- playtest: keyboard repeat guard (day 12)
