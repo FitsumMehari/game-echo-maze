@@ -319,3 +319,4 @@
 - shader: volume ramp on resume (day 12)
 - debug: harmonic twin-ring decay (day 12)
 - refactor: silence dividend gate (day 12)
+- balance: sector HUD readability (day 12)
