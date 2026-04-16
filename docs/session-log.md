@@ -343,3 +343,4 @@
 - ui: door/switch affordance (day 13)
 - wip: merged geometry bounds (day 13)
 - test: harmonic twin-ring decay (day 13)
+- balance: hunter seek curve (day 13)
