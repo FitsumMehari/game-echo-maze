@@ -349,3 +349,4 @@
 - refactor: door/switch affordance (day 13)
 - refactor: hazard reset flow (day 13)
 - tweak: spawn pulse on restart (day 13)
+- polish: merged geometry bounds (day 13)
