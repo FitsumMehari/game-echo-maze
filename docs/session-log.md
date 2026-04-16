@@ -354,3 +354,4 @@
 - perf: spawn pulse on restart (day 13)
 - perf: stereo ping pan width (day 13)
 - debug: camera far plane (day 13)
+- wip: decoy wall shader lie (day 13)
