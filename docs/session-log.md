@@ -356,3 +356,4 @@
 - debug: camera far plane (day 13)
 - wip: decoy wall shader lie (day 13)
 - shader: projectile bounce damping (day 13)
+- debug: mobile drag look (day 13)
