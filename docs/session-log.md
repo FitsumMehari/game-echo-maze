@@ -359,3 +359,4 @@
 - debug: mobile drag look (day 13)
 - debug: touch look sensitivity (day 13)
 - ui: hunter seek curve (day 13)
+- audio: menu copy clarity (day 13)
