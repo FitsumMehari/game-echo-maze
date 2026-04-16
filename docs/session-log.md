@@ -351,3 +351,4 @@
 - tweak: spawn pulse on restart (day 13)
 - polish: merged geometry bounds (day 13)
 - test: footstep pulse gain (day 13)
+- perf: spawn pulse on restart (day 13)
