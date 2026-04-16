@@ -348,3 +348,4 @@
 - wip: door/switch affordance (day 13)
 - refactor: door/switch affordance (day 13)
 - refactor: hazard reset flow (day 13)
+- tweak: spawn pulse on restart (day 13)
