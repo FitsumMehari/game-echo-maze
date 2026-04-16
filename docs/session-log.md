@@ -345,3 +345,4 @@
 - test: harmonic twin-ring decay (day 13)
 - balance: hunter seek curve (day 13)
 - tweak: resonance charge curve (day 13)
+- wip: door/switch affordance (day 13)
