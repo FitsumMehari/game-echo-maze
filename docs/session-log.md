@@ -353,3 +353,4 @@
 - test: footstep pulse gain (day 13)
 - perf: spawn pulse on restart (day 13)
 - perf: stereo ping pan width (day 13)
+- debug: camera far plane (day 13)
