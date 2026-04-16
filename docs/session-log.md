@@ -340,3 +340,4 @@
 - debug: menu copy clarity (day 12)
 - ui: decoy wall shader lie (day 12)
 - shader: footstep pulse gain (day 12)
+- ui: door/switch affordance (day 13)
