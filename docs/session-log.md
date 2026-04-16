@@ -342,3 +342,4 @@
 - shader: footstep pulse gain (day 12)
 - ui: door/switch affordance (day 13)
 - wip: merged geometry bounds (day 13)
+- test: harmonic twin-ring decay (day 13)
