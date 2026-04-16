@@ -346,3 +346,4 @@
 - balance: hunter seek curve (day 13)
 - tweak: resonance charge curve (day 13)
 - wip: door/switch affordance (day 13)
+- refactor: door/switch affordance (day 13)
