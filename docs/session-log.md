@@ -369,3 +369,4 @@
 - ui: spawn pulse on restart (day 13)
 - ui: pointer lock + pause edge case (day 13)
 - shader: enemy mesh batching (day 13)
+- playtest: menu copy clarity (day 13)
