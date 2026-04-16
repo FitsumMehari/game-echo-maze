@@ -364,3 +364,4 @@
 - audio: hunter seek curve (day 13)
 - playtest: decoy wall shader lie (day 13)
 - test: merged geometry bounds (day 13)
+- shader: merged geometry bounds (day 13)
