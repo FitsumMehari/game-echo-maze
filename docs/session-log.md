@@ -361,3 +361,4 @@
 - ui: hunter seek curve (day 13)
 - audio: menu copy clarity (day 13)
 - refactor: menu copy clarity (day 13)
+- audio: hunter seek curve (day 13)
