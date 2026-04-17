@@ -397,3 +397,4 @@
 - perf: projectile bounce damping (day 14)
 - note: tile absorption tuning (day 14)
 - debug: ringwell absorption (day 14)
+- shader: win/lose overlay timing (day 14)
