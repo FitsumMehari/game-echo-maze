@@ -377,3 +377,4 @@
 - refactor: resonance charge curve (day 14)
 - debug: tile absorption tuning (day 14)
 - ui: merged geometry bounds (day 14)
+- tweak: pointer lock + pause edge case (day 14)
