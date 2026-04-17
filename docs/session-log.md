@@ -375,3 +375,4 @@
 - audio: camera far plane (day 14)
 - shader: sector HUD readability (day 14)
 - refactor: resonance charge curve (day 14)
+- debug: tile absorption tuning (day 14)
