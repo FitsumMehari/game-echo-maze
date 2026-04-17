@@ -389,3 +389,4 @@
 - balance: tile absorption tuning (day 14)
 - tweak: door/switch affordance (day 14)
 - wip: exit seal denial cue (day 14)
+- polish: footstep pulse gain (day 14)
