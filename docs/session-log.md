@@ -392,3 +392,4 @@
 - polish: footstep pulse gain (day 14)
 - shader: hazard reset flow (day 14)
 - wip: silence dividend gate (day 14)
+- polish: menu copy clarity (day 14)
