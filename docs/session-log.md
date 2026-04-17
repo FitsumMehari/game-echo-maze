@@ -385,3 +385,4 @@
 - perf: footstep pulse gain (day 14)
 - note: keyboard repeat guard (day 14)
 - note: camera far plane (day 14)
+- wip: sector HUD readability (day 14)
