@@ -381,3 +381,4 @@
 - audio: hazard reset flow (day 14)
 - tweak: door/switch affordance (day 14)
 - perf: WebGL context lost copy (day 14)
+- perf: touch look sensitivity (day 14)
