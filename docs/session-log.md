@@ -396,3 +396,4 @@
 - polish: menu copy clarity (day 14)
 - perf: projectile bounce damping (day 14)
 - note: tile absorption tuning (day 14)
+- debug: ringwell absorption (day 14)
