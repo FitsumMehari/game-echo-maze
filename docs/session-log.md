@@ -383,3 +383,4 @@
 - perf: WebGL context lost copy (day 14)
 - perf: touch look sensitivity (day 14)
 - perf: footstep pulse gain (day 14)
+- note: keyboard repeat guard (day 14)
