@@ -373,3 +373,4 @@
 - test: door/switch affordance (day 14)
 - refactor: spawn pulse on restart (day 14)
 - audio: camera far plane (day 14)
+- shader: sector HUD readability (day 14)
