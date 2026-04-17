@@ -391,3 +391,4 @@
 - wip: exit seal denial cue (day 14)
 - polish: footstep pulse gain (day 14)
 - shader: hazard reset flow (day 14)
+- wip: silence dividend gate (day 14)
