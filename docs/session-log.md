@@ -372,3 +372,4 @@
 - playtest: menu copy clarity (day 13)
 - test: door/switch affordance (day 14)
 - refactor: spawn pulse on restart (day 14)
+- audio: camera far plane (day 14)
