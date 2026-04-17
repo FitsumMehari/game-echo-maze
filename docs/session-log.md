@@ -394,3 +394,4 @@
 - wip: silence dividend gate (day 14)
 - polish: menu copy clarity (day 14)
 - polish: menu copy clarity (day 14)
+- perf: projectile bounce damping (day 14)
