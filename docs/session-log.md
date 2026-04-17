@@ -398,3 +398,4 @@
 - note: tile absorption tuning (day 14)
 - debug: ringwell absorption (day 14)
 - shader: win/lose overlay timing (day 14)
+- tweak: exit seal denial cue (day 14)
