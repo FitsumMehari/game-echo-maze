@@ -388,3 +388,4 @@
 - wip: sector HUD readability (day 14)
 - balance: tile absorption tuning (day 14)
 - tweak: door/switch affordance (day 14)
+- wip: exit seal denial cue (day 14)
