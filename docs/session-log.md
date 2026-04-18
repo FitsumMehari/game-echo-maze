@@ -429,3 +429,4 @@
 - perf: harmonic twin-ring decay (day 15)
 - shader: exit seal denial cue (day 15)
 - playtest: menu copy clarity (day 15)
+- refactor: silence dividend gate (day 15)
