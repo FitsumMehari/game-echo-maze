@@ -421,3 +421,4 @@
 - tweak: merged geometry bounds (day 15)
 - ui: enemy mesh batching (day 15)
 - ui: stereo ping pan width (day 15)
+- wip: silence dividend gate (day 15)
