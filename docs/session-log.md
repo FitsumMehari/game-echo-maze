@@ -403,3 +403,4 @@
 - ui: volume ramp on resume (day 15)
 - test: win/lose overlay timing (day 15)
 - audio: stereo ping pan width (day 15)
+- note: harmonic twin-ring decay (day 15)
