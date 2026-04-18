@@ -406,3 +406,4 @@
 - note: harmonic twin-ring decay (day 15)
 - debug: hazard reset flow (day 15)
 - debug: silence dividend gate (day 15)
+- tweak: mobile drag look (day 15)
