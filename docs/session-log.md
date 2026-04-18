@@ -427,3 +427,4 @@
 - perf: stereo ping pan width (day 15)
 - wip: WebGL context lost copy (day 15)
 - perf: harmonic twin-ring decay (day 15)
+- shader: exit seal denial cue (day 15)
