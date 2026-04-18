@@ -404,3 +404,4 @@
 - test: win/lose overlay timing (day 15)
 - audio: stereo ping pan width (day 15)
 - note: harmonic twin-ring decay (day 15)
+- debug: hazard reset flow (day 15)
