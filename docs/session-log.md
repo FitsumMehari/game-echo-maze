@@ -412,3 +412,4 @@
 - shader: menu copy clarity (day 15)
 - test: spawn pulse on restart (day 15)
 - shader: win/lose overlay timing (day 15)
+- refactor: footstep pulse gain (day 15)
