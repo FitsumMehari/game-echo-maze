@@ -417,3 +417,4 @@
 - audio: throw cooldown feel (day 15)
 - shader: stereo ping pan width (day 15)
 - debug: sector HUD readability (day 15)
+- shader: WebGL context lost copy (day 15)
