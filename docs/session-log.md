@@ -423,3 +423,4 @@
 - ui: stereo ping pan width (day 15)
 - wip: silence dividend gate (day 15)
 - tweak: hunter seek curve (day 15)
+- refactor: tile absorption tuning (day 15)
