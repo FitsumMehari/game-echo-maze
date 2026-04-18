@@ -401,3 +401,4 @@
 - tweak: exit seal denial cue (day 14)
 - note: menu copy clarity (day 14)
 - ui: volume ramp on resume (day 15)
+- test: win/lose overlay timing (day 15)
