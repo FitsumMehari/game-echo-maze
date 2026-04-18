@@ -419,3 +419,4 @@
 - debug: sector HUD readability (day 15)
 - shader: WebGL context lost copy (day 15)
 - tweak: merged geometry bounds (day 15)
+- ui: enemy mesh batching (day 15)
