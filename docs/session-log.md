@@ -409,3 +409,4 @@
 - tweak: mobile drag look (day 15)
 - polish: decoy wall shader lie (day 15)
 - balance: win/lose overlay timing (day 15)
+- shader: menu copy clarity (day 15)
