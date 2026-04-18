@@ -413,3 +413,4 @@
 - test: spawn pulse on restart (day 15)
 - shader: win/lose overlay timing (day 15)
 - refactor: footstep pulse gain (day 15)
+- audio: resonance charge curve (day 15)
