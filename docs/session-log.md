@@ -407,3 +407,4 @@
 - debug: hazard reset flow (day 15)
 - debug: silence dividend gate (day 15)
 - tweak: mobile drag look (day 15)
+- polish: decoy wall shader lie (day 15)
