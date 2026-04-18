@@ -415,3 +415,4 @@
 - refactor: footstep pulse gain (day 15)
 - audio: resonance charge curve (day 15)
 - audio: throw cooldown feel (day 15)
+- shader: stereo ping pan width (day 15)
