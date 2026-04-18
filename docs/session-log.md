@@ -428,3 +428,4 @@
 - wip: WebGL context lost copy (day 15)
 - perf: harmonic twin-ring decay (day 15)
 - shader: exit seal denial cue (day 15)
+- playtest: menu copy clarity (day 15)
