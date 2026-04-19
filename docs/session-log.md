@@ -450,3 +450,4 @@
 - note: projectile bounce damping (day 16)
 - audio: stereo ping pan width (day 16)
 - polish: WebGL context lost copy (day 16)
+- audio: door/switch affordance (day 16)
