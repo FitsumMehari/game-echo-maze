@@ -449,3 +449,4 @@
 - debug: camera far plane (day 16)
 - note: projectile bounce damping (day 16)
 - audio: stereo ping pan width (day 16)
+- polish: WebGL context lost copy (day 16)
