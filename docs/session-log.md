@@ -432,3 +432,4 @@
 - refactor: silence dividend gate (day 15)
 - playtest: decoy wall shader lie (day 16)
 - debug: tile absorption tuning (day 16)
+- debug: volume ramp on resume (day 16)
