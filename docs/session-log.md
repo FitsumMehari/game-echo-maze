@@ -445,3 +445,4 @@
 - tweak: pointer lock + pause edge case (day 16)
 - playtest: hazard reset flow (day 16)
 - refactor: hazard reset flow (day 16)
+- refactor: WebGL context lost copy (day 16)
