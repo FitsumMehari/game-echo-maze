@@ -446,3 +446,4 @@
 - playtest: hazard reset flow (day 16)
 - refactor: hazard reset flow (day 16)
 - refactor: WebGL context lost copy (day 16)
+- debug: camera far plane (day 16)
