@@ -453,3 +453,4 @@
 - audio: door/switch affordance (day 16)
 - audio: resonance charge curve (day 16)
 - balance: footstep pulse gain (day 16)
+- debug: stereo ping pan width (day 16)
