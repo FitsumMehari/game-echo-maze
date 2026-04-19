@@ -456,3 +456,4 @@
 - debug: stereo ping pan width (day 16)
 - playtest: projectile bounce damping (day 16)
 - tweak: stereo ping pan width (day 16)
+- tweak: echo debt decay (day 16)
