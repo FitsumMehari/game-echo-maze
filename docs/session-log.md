@@ -440,3 +440,4 @@
 - perf: camera far plane (day 16)
 - shader: keyboard repeat guard (day 16)
 - shader: tile absorption tuning (day 16)
+- test: sector HUD readability (day 16)
