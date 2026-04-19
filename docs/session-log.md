@@ -452,3 +452,4 @@
 - polish: WebGL context lost copy (day 16)
 - audio: door/switch affordance (day 16)
 - audio: resonance charge curve (day 16)
+- balance: footstep pulse gain (day 16)
