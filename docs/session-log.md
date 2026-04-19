@@ -434,3 +434,4 @@
 - debug: tile absorption tuning (day 16)
 - debug: volume ramp on resume (day 16)
 - perf: WebGL context lost copy (day 16)
+- audio: enemy mesh batching (day 16)
