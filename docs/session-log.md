@@ -437,3 +437,4 @@
 - audio: enemy mesh batching (day 16)
 - shader: harmonic twin-ring decay (day 16)
 - polish: hazard reset flow (day 16)
+- perf: camera far plane (day 16)
