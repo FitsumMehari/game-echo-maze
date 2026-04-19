@@ -455,3 +455,4 @@
 - balance: footstep pulse gain (day 16)
 - debug: stereo ping pan width (day 16)
 - playtest: projectile bounce damping (day 16)
+- tweak: stereo ping pan width (day 16)
