@@ -435,3 +435,4 @@
 - debug: volume ramp on resume (day 16)
 - perf: WebGL context lost copy (day 16)
 - audio: enemy mesh batching (day 16)
+- shader: harmonic twin-ring decay (day 16)
