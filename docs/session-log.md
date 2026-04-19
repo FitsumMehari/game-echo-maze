@@ -458,3 +458,4 @@
 - tweak: stereo ping pan width (day 16)
 - tweak: echo debt decay (day 16)
 - ui: ringwell absorption (day 16)
+- wip: mobile drag look (day 16)
