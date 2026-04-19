@@ -443,3 +443,4 @@
 - test: sector HUD readability (day 16)
 - refactor: enemy mesh batching (day 16)
 - tweak: pointer lock + pause edge case (day 16)
+- playtest: hazard reset flow (day 16)
