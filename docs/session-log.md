@@ -483,3 +483,4 @@
 - balance: spawn pulse on restart (day 17)
 - ui: decoy wall shader lie (day 17)
 - wip: resonance charge curve (day 17)
+- balance: exit seal denial cue (day 17)
