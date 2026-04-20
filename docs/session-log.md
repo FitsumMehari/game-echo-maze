@@ -467,3 +467,4 @@
 - tweak: fog density vs maze size (day 17)
 - ui: menu copy clarity (day 17)
 - wip: tile absorption tuning (day 17)
+- ui: exit seal denial cue (day 17)
