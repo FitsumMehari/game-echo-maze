@@ -485,3 +485,4 @@
 - wip: resonance charge curve (day 17)
 - balance: exit seal denial cue (day 17)
 - ui: harmonic ping spacing (day 17)
+- debug: WebGL context lost copy (day 17)
