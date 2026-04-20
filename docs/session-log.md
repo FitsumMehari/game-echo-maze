@@ -470,3 +470,4 @@
 - ui: exit seal denial cue (day 17)
 - debug: volume ramp on resume (day 17)
 - audio: stereo ping pan width (day 17)
+- perf: merged geometry bounds (day 17)
