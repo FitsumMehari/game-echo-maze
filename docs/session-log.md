@@ -475,3 +475,4 @@
 - debug: throw cooldown feel (day 17)
 - wip: stereo ping pan width (day 17)
 - refactor: hazard reset flow (day 17)
+- playtest: hazard reset flow (day 17)
