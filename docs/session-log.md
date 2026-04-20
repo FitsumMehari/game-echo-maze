@@ -487,3 +487,4 @@
 - ui: harmonic ping spacing (day 17)
 - debug: WebGL context lost copy (day 17)
 - shader: menu copy clarity (day 17)
+- perf: exit seal denial cue (day 17)
