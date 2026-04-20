@@ -472,3 +472,4 @@
 - audio: stereo ping pan width (day 17)
 - perf: merged geometry bounds (day 17)
 - ui: sector HUD readability (day 17)
+- debug: throw cooldown feel (day 17)
