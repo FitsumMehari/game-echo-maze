@@ -478,3 +478,4 @@
 - playtest: hazard reset flow (day 17)
 - shader: touch look sensitivity (day 17)
 - refactor: WebGL context lost copy (day 17)
+- test: win/lose overlay timing (day 17)
