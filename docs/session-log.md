@@ -488,3 +488,4 @@
 - debug: WebGL context lost copy (day 17)
 - shader: menu copy clarity (day 17)
 - perf: exit seal denial cue (day 17)
+- audio: keyboard repeat guard (day 17)
