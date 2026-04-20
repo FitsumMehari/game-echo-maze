@@ -463,3 +463,4 @@
 - ui: volume ramp on resume (day 17)
 - note: fog density vs maze size (day 17)
 - debug: enemy mesh batching (day 17)
+- perf: exit seal denial cue (day 17)
