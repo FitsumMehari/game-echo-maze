@@ -469,3 +469,4 @@
 - wip: tile absorption tuning (day 17)
 - ui: exit seal denial cue (day 17)
 - debug: volume ramp on resume (day 17)
+- audio: stereo ping pan width (day 17)
