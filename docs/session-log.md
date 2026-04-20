@@ -465,3 +465,4 @@
 - debug: enemy mesh batching (day 17)
 - perf: exit seal denial cue (day 17)
 - tweak: fog density vs maze size (day 17)
+- ui: menu copy clarity (day 17)
