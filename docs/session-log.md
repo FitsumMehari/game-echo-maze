@@ -482,3 +482,4 @@
 - wip: WebGL context lost copy (day 17)
 - balance: spawn pulse on restart (day 17)
 - ui: decoy wall shader lie (day 17)
+- wip: resonance charge curve (day 17)
