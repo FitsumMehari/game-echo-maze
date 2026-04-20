@@ -471,3 +471,4 @@
 - debug: volume ramp on resume (day 17)
 - audio: stereo ping pan width (day 17)
 - perf: merged geometry bounds (day 17)
+- ui: sector HUD readability (day 17)
