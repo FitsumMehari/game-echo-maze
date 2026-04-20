@@ -460,3 +460,4 @@
 - ui: ringwell absorption (day 16)
 - wip: mobile drag look (day 16)
 - audio: hunter seek curve (day 16)
+- ui: volume ramp on resume (day 17)
