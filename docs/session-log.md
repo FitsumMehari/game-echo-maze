@@ -484,3 +484,4 @@
 - ui: decoy wall shader lie (day 17)
 - wip: resonance charge curve (day 17)
 - balance: exit seal denial cue (day 17)
+- ui: harmonic ping spacing (day 17)
