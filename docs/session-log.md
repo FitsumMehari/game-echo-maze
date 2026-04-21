@@ -501,3 +501,4 @@
 - wip: enemy mesh batching (day 18)
 - perf: hazard reset flow (day 18)
 - shader: volume ramp on resume (day 18)
+- tweak: harmonic ping spacing (day 18)
