@@ -499,3 +499,4 @@
 - shader: ringwell absorption (day 18)
 - note: decoy wall shader lie (day 18)
 - wip: enemy mesh batching (day 18)
+- perf: hazard reset flow (day 18)
