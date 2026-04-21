@@ -490,3 +490,4 @@
 - perf: exit seal denial cue (day 17)
 - audio: keyboard repeat guard (day 17)
 - tweak: footstep pulse gain (day 17)
+- wip: silence dividend gate (day 18)
