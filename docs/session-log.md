@@ -504,3 +504,4 @@
 - tweak: harmonic ping spacing (day 18)
 - ui: fog density vs maze size (day 18)
 - ui: sector HUD readability (day 18)
+- test: fog density vs maze size (day 18)
