@@ -517,3 +517,4 @@
 - perf: merged geometry bounds (day 18)
 - tweak: hazard reset flow (day 18)
 - note: resonance charge curve (day 18)
+- note: enemy mesh batching (day 18)
