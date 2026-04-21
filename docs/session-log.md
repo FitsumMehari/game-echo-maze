@@ -494,3 +494,4 @@
 - polish: silence dividend gate (day 18)
 - ui: throw cooldown feel (day 18)
 - playtest: enemy mesh batching (day 18)
+- balance: win/lose overlay timing (day 18)
