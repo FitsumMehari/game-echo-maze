@@ -493,3 +493,4 @@
 - wip: silence dividend gate (day 18)
 - polish: silence dividend gate (day 18)
 - ui: throw cooldown feel (day 18)
+- playtest: enemy mesh batching (day 18)
