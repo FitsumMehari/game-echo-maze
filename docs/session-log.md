@@ -506,3 +506,4 @@
 - ui: sector HUD readability (day 18)
 - test: fog density vs maze size (day 18)
 - debug: enemy mesh batching (day 18)
+- audio: stereo ping pan width (day 18)
