@@ -518,3 +518,4 @@
 - tweak: hazard reset flow (day 18)
 - note: resonance charge curve (day 18)
 - note: enemy mesh batching (day 18)
+- refactor: pointer lock + pause edge case (day 18)
