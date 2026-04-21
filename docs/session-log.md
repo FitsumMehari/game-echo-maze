@@ -516,3 +516,4 @@
 - audio: hazard reset flow (day 18)
 - perf: merged geometry bounds (day 18)
 - tweak: hazard reset flow (day 18)
+- note: resonance charge curve (day 18)
