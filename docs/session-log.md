@@ -497,3 +497,4 @@
 - balance: win/lose overlay timing (day 18)
 - ui: enemy mesh batching (day 18)
 - shader: ringwell absorption (day 18)
+- note: decoy wall shader lie (day 18)
