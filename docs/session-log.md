@@ -509,3 +509,4 @@
 - audio: stereo ping pan width (day 18)
 - playtest: fog density vs maze size (day 18)
 - audio: harmonic twin-ring decay (day 18)
+- audio: throw cooldown feel (day 18)
