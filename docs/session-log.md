@@ -503,3 +503,4 @@
 - shader: volume ramp on resume (day 18)
 - tweak: harmonic ping spacing (day 18)
 - ui: fog density vs maze size (day 18)
+- ui: sector HUD readability (day 18)
