@@ -508,3 +508,4 @@
 - debug: enemy mesh batching (day 18)
 - audio: stereo ping pan width (day 18)
 - playtest: fog density vs maze size (day 18)
+- audio: harmonic twin-ring decay (day 18)
