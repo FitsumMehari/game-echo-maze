@@ -512,3 +512,4 @@
 - audio: throw cooldown feel (day 18)
 - perf: touch look sensitivity (day 18)
 - ui: keyboard repeat guard (day 18)
+- polish: sector HUD readability (day 18)
