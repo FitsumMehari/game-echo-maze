@@ -492,3 +492,4 @@
 - tweak: footstep pulse gain (day 17)
 - wip: silence dividend gate (day 18)
 - polish: silence dividend gate (day 18)
+- ui: throw cooldown feel (day 18)
