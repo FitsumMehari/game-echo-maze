@@ -513,3 +513,4 @@
 - perf: touch look sensitivity (day 18)
 - ui: keyboard repeat guard (day 18)
 - polish: sector HUD readability (day 18)
+- audio: hazard reset flow (day 18)
