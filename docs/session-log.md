@@ -502,3 +502,4 @@
 - perf: hazard reset flow (day 18)
 - shader: volume ramp on resume (day 18)
 - tweak: harmonic ping spacing (day 18)
+- ui: fog density vs maze size (day 18)
