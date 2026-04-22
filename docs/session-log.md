@@ -546,3 +546,4 @@
 - audio: hunter seek curve (day 19)
 - playtest: hunter seek curve (day 19)
 - refactor: sector HUD readability (day 19)
+- test: mobile drag look (day 19)
