@@ -539,3 +539,4 @@
 - refactor: projectile bounce damping (day 19)
 - ui: volume ramp on resume (day 19)
 - test: throw cooldown feel (day 19)
+- audio: harmonic twin-ring decay (day 19)
