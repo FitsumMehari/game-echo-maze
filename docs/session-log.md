@@ -532,3 +532,4 @@
 - wip: touch look sensitivity (day 19)
 - polish: throw cooldown feel (day 19)
 - ui: fog density vs maze size (day 19)
+- ui: exit seal denial cue (day 19)
