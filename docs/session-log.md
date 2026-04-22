@@ -530,3 +530,4 @@
 - playtest: volume ramp on resume (day 19)
 - tweak: WebGL context lost copy (day 19)
 - wip: touch look sensitivity (day 19)
+- polish: throw cooldown feel (day 19)
