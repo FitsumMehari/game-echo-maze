@@ -542,3 +542,4 @@
 - audio: harmonic twin-ring decay (day 19)
 - playtest: enemy mesh batching (day 19)
 - debug: merged geometry bounds (day 19)
+- wip: ringwell absorption (day 19)
