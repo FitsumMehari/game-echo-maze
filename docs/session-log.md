@@ -522,3 +522,4 @@
 - audio: touch look sensitivity (day 18)
 - wip: ringwell absorption (day 19)
 - refactor: ringwell absorption (day 19)
+- wip: mobile drag look (day 19)
