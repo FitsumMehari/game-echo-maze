@@ -527,3 +527,4 @@
 - audio: decoy wall shader lie (day 19)
 - note: WebGL context lost copy (day 19)
 - debug: pointer lock + pause edge case (day 19)
+- playtest: volume ramp on resume (day 19)
