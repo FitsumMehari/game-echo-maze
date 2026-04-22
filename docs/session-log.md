@@ -521,3 +521,4 @@
 - refactor: pointer lock + pause edge case (day 18)
 - audio: touch look sensitivity (day 18)
 - wip: ringwell absorption (day 19)
+- refactor: ringwell absorption (day 19)
