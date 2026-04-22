@@ -536,3 +536,4 @@
 - perf: door/switch affordance (day 19)
 - note: sector HUD readability (day 19)
 - perf: pointer lock + pause edge case (day 19)
+- refactor: projectile bounce damping (day 19)
