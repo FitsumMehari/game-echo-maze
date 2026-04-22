@@ -549,3 +549,4 @@
 - test: mobile drag look (day 19)
 - test: touch look sensitivity (day 19)
 - balance: hunter seek curve (day 19)
+- polish: menu copy clarity (day 19)
