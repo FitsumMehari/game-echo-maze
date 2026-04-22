@@ -538,3 +538,4 @@
 - perf: pointer lock + pause edge case (day 19)
 - refactor: projectile bounce damping (day 19)
 - ui: volume ramp on resume (day 19)
+- test: throw cooldown feel (day 19)
