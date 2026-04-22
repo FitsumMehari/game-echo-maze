@@ -545,3 +545,4 @@
 - wip: ringwell absorption (day 19)
 - audio: hunter seek curve (day 19)
 - playtest: hunter seek curve (day 19)
+- refactor: sector HUD readability (day 19)
