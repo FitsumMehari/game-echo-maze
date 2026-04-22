@@ -529,3 +529,4 @@
 - debug: pointer lock + pause edge case (day 19)
 - playtest: volume ramp on resume (day 19)
 - tweak: WebGL context lost copy (day 19)
+- wip: touch look sensitivity (day 19)
