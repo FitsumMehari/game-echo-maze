@@ -547,3 +547,4 @@
 - playtest: hunter seek curve (day 19)
 - refactor: sector HUD readability (day 19)
 - test: mobile drag look (day 19)
+- test: touch look sensitivity (day 19)
