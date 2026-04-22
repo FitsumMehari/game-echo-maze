@@ -541,3 +541,4 @@
 - test: throw cooldown feel (day 19)
 - audio: harmonic twin-ring decay (day 19)
 - playtest: enemy mesh batching (day 19)
+- debug: merged geometry bounds (day 19)
