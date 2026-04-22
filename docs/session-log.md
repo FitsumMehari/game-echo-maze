@@ -520,3 +520,4 @@
 - note: enemy mesh batching (day 18)
 - refactor: pointer lock + pause edge case (day 18)
 - audio: touch look sensitivity (day 18)
+- wip: ringwell absorption (day 19)
