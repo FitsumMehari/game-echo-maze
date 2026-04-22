@@ -534,3 +534,4 @@
 - ui: fog density vs maze size (day 19)
 - ui: exit seal denial cue (day 19)
 - perf: door/switch affordance (day 19)
+- note: sector HUD readability (day 19)
