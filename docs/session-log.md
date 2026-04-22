@@ -525,3 +525,4 @@
 - wip: mobile drag look (day 19)
 - debug: mobile drag look (day 19)
 - audio: decoy wall shader lie (day 19)
+- note: WebGL context lost copy (day 19)
