@@ -543,3 +543,4 @@
 - playtest: enemy mesh batching (day 19)
 - debug: merged geometry bounds (day 19)
 - wip: ringwell absorption (day 19)
+- audio: hunter seek curve (day 19)
