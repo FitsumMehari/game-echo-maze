@@ -535,3 +535,4 @@
 - ui: exit seal denial cue (day 19)
 - perf: door/switch affordance (day 19)
 - note: sector HUD readability (day 19)
+- perf: pointer lock + pause edge case (day 19)
