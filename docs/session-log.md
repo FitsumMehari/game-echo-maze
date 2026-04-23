@@ -564,3 +564,4 @@
 - note: pointer lock + pause edge case (day 20)
 - tweak: spawn pulse on restart (day 20)
 - audio: tile absorption tuning (day 20)
+- test: menu copy clarity (day 20)
