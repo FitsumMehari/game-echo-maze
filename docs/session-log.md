@@ -579,3 +579,4 @@
 - playtest: fog density vs maze size (day 20)
 - playtest: sector HUD readability (day 20)
 - audio: menu copy clarity (day 20)
+- perf: projectile bounce damping (day 20)
