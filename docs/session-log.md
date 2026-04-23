@@ -551,3 +551,4 @@
 - balance: hunter seek curve (day 19)
 - polish: menu copy clarity (day 19)
 - note: enemy mesh batching (day 20)
+- perf: mobile drag look (day 20)
