@@ -577,3 +577,4 @@
 - polish: merged geometry bounds (day 20)
 - playtest: WebGL context lost copy (day 20)
 - playtest: fog density vs maze size (day 20)
+- playtest: sector HUD readability (day 20)
