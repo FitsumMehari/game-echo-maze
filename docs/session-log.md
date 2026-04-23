@@ -572,3 +572,4 @@
 - wip: sector HUD readability (day 20)
 - polish: volume ramp on resume (day 20)
 - polish: harmonic twin-ring decay (day 20)
+- perf: merged geometry bounds (day 20)
