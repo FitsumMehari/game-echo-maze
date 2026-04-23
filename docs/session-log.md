@@ -570,3 +570,4 @@
 - polish: camera far plane (day 20)
 - debug: decoy wall shader lie (day 20)
 - wip: sector HUD readability (day 20)
+- polish: volume ramp on resume (day 20)
