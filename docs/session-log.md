@@ -550,3 +550,4 @@
 - test: touch look sensitivity (day 19)
 - balance: hunter seek curve (day 19)
 - polish: menu copy clarity (day 19)
+- note: enemy mesh batching (day 20)
