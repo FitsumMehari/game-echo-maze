@@ -562,3 +562,4 @@
 - ui: enemy mesh batching (day 20)
 - playtest: keyboard repeat guard (day 20)
 - note: pointer lock + pause edge case (day 20)
+- tweak: spawn pulse on restart (day 20)
