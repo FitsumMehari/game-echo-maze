@@ -573,3 +573,4 @@
 - polish: volume ramp on resume (day 20)
 - polish: harmonic twin-ring decay (day 20)
 - perf: merged geometry bounds (day 20)
+- perf: camera far plane (day 20)
