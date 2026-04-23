@@ -561,3 +561,4 @@
 - audio: hunter seek curve (day 20)
 - ui: enemy mesh batching (day 20)
 - playtest: keyboard repeat guard (day 20)
+- note: pointer lock + pause edge case (day 20)
