@@ -568,3 +568,4 @@
 - tweak: stereo ping pan width (day 20)
 - audio: harmonic ping spacing (day 20)
 - polish: camera far plane (day 20)
+- debug: decoy wall shader lie (day 20)
