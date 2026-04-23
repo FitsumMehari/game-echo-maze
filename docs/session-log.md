@@ -553,3 +553,4 @@
 - note: enemy mesh batching (day 20)
 - perf: mobile drag look (day 20)
 - note: keyboard repeat guard (day 20)
+- ui: volume ramp on resume (day 20)
