@@ -560,3 +560,4 @@
 - debug: harmonic ping spacing (day 20)
 - audio: hunter seek curve (day 20)
 - ui: enemy mesh batching (day 20)
+- playtest: keyboard repeat guard (day 20)
