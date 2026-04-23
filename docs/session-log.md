@@ -558,3 +558,4 @@
 - perf: door/switch affordance (day 20)
 - refactor: silence dividend gate (day 20)
 - debug: harmonic ping spacing (day 20)
+- audio: hunter seek curve (day 20)
