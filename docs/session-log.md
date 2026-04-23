@@ -557,3 +557,4 @@
 - shader: hazard reset flow (day 20)
 - perf: door/switch affordance (day 20)
 - refactor: silence dividend gate (day 20)
+- debug: harmonic ping spacing (day 20)
