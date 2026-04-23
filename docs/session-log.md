@@ -575,3 +575,4 @@
 - perf: merged geometry bounds (day 20)
 - perf: camera far plane (day 20)
 - polish: merged geometry bounds (day 20)
+- playtest: WebGL context lost copy (day 20)
