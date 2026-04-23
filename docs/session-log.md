@@ -566,3 +566,4 @@
 - audio: tile absorption tuning (day 20)
 - test: menu copy clarity (day 20)
 - tweak: stereo ping pan width (day 20)
+- audio: harmonic ping spacing (day 20)
