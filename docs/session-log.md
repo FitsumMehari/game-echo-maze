@@ -578,3 +578,4 @@
 - playtest: WebGL context lost copy (day 20)
 - playtest: fog density vs maze size (day 20)
 - playtest: sector HUD readability (day 20)
+- audio: menu copy clarity (day 20)
