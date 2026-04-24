@@ -606,3 +606,4 @@
 - wip: hunter seek curve (day 21)
 - perf: menu copy clarity (day 21)
 - shader: silence dividend gate (day 21)
+- wip: fog density vs maze size (day 21)
