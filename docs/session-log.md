@@ -595,3 +595,4 @@
 - note: keyboard repeat guard (day 21)
 - perf: sector HUD readability (day 21)
 - refactor: win/lose overlay timing (day 21)
+- wip: ringwell absorption (day 21)
