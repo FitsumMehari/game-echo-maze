@@ -586,3 +586,4 @@
 - wip: stereo ping pan width (day 21)
 - audio: camera far plane (day 21)
 - polish: footstep pulse gain (day 21)
+- ui: menu copy clarity (day 21)
