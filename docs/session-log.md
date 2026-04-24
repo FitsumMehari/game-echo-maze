@@ -587,3 +587,4 @@
 - audio: camera far plane (day 21)
 - polish: footstep pulse gain (day 21)
 - ui: menu copy clarity (day 21)
+- note: resonance charge curve (day 21)
