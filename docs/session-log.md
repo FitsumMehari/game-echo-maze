@@ -582,3 +582,4 @@
 - perf: projectile bounce damping (day 20)
 - refactor: hunter seek curve (day 21)
 - perf: stereo ping pan width (day 21)
+- note: harmonic ping spacing (day 21)
