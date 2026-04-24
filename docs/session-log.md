@@ -585,3 +585,4 @@
 - note: harmonic ping spacing (day 21)
 - wip: stereo ping pan width (day 21)
 - audio: camera far plane (day 21)
+- polish: footstep pulse gain (day 21)
