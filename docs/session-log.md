@@ -584,3 +584,4 @@
 - perf: stereo ping pan width (day 21)
 - note: harmonic ping spacing (day 21)
 - wip: stereo ping pan width (day 21)
+- audio: camera far plane (day 21)
