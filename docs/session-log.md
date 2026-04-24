@@ -596,3 +596,4 @@
 - perf: sector HUD readability (day 21)
 - refactor: win/lose overlay timing (day 21)
 - wip: ringwell absorption (day 21)
+- tweak: footstep pulse gain (day 21)
