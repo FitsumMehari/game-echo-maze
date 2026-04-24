@@ -608,3 +608,4 @@
 - shader: silence dividend gate (day 21)
 - wip: fog density vs maze size (day 21)
 - balance: throw cooldown feel (day 21)
+- refactor: win/lose overlay timing (day 21)
