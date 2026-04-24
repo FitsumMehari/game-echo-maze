@@ -603,3 +603,4 @@
 - playtest: footstep pulse gain (day 21)
 - debug: harmonic ping spacing (day 21)
 - wip: merged geometry bounds (day 21)
+- wip: hunter seek curve (day 21)
