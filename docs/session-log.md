@@ -581,3 +581,4 @@
 - audio: menu copy clarity (day 20)
 - perf: projectile bounce damping (day 20)
 - refactor: hunter seek curve (day 21)
+- perf: stereo ping pan width (day 21)
