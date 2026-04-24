@@ -609,3 +609,4 @@
 - wip: fog density vs maze size (day 21)
 - balance: throw cooldown feel (day 21)
 - refactor: win/lose overlay timing (day 21)
+- ui: pointer lock + pause edge case (day 21)
