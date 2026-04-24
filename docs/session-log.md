@@ -594,3 +594,4 @@
 - tweak: volume ramp on resume (day 21)
 - note: keyboard repeat guard (day 21)
 - perf: sector HUD readability (day 21)
+- refactor: win/lose overlay timing (day 21)
