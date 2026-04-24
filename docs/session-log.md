@@ -598,3 +598,4 @@
 - wip: ringwell absorption (day 21)
 - tweak: footstep pulse gain (day 21)
 - audio: enemy mesh batching (day 21)
+- polish: fog density vs maze size (day 21)
