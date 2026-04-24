@@ -601,3 +601,4 @@
 - polish: fog density vs maze size (day 21)
 - perf: mobile drag look (day 21)
 - playtest: footstep pulse gain (day 21)
+- debug: harmonic ping spacing (day 21)
