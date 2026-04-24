@@ -592,3 +592,4 @@
 - perf: volume ramp on resume (day 21)
 - audio: footstep pulse gain (day 21)
 - tweak: volume ramp on resume (day 21)
+- note: keyboard repeat guard (day 21)
