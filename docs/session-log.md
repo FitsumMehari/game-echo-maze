@@ -591,3 +591,4 @@
 - note: door/switch affordance (day 21)
 - perf: volume ramp on resume (day 21)
 - audio: footstep pulse gain (day 21)
+- tweak: volume ramp on resume (day 21)
