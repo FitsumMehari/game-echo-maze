@@ -605,3 +605,4 @@
 - wip: merged geometry bounds (day 21)
 - wip: hunter seek curve (day 21)
 - perf: menu copy clarity (day 21)
+- shader: silence dividend gate (day 21)
