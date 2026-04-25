@@ -639,3 +639,4 @@
 - debug: pointer lock + pause edge case (day 22)
 - audio: ringwell absorption (day 22)
 - tweak: touch look sensitivity (day 22)
+- debug: hazard reset flow (day 22)
