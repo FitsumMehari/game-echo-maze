@@ -633,3 +633,4 @@
 - tweak: enemy mesh batching (day 22)
 - tweak: hunter seek curve (day 22)
 - tweak: door/switch affordance (day 22)
+- audio: projectile bounce damping (day 22)
