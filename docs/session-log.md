@@ -625,3 +625,4 @@
 - perf: menu copy clarity (day 22)
 - tweak: resonance charge curve (day 22)
 - test: resonance charge curve (day 22)
+- ui: WebGL context lost copy (day 22)
