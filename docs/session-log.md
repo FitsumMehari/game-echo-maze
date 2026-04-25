@@ -618,3 +618,4 @@
 - ui: WebGL context lost copy (day 22)
 - test: door/switch affordance (day 22)
 - perf: door/switch affordance (day 22)
+- debug: hazard reset flow (day 22)
