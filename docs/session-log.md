@@ -615,3 +615,4 @@
 - refactor: mobile drag look (day 22)
 - tweak: camera far plane (day 22)
 - tweak: echo debt decay (day 22)
+- ui: WebGL context lost copy (day 22)
