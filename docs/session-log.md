@@ -617,3 +617,4 @@
 - tweak: echo debt decay (day 22)
 - ui: WebGL context lost copy (day 22)
 - test: door/switch affordance (day 22)
+- perf: door/switch affordance (day 22)
