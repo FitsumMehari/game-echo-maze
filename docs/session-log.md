@@ -632,3 +632,4 @@
 - playtest: decoy wall shader lie (day 22)
 - tweak: enemy mesh batching (day 22)
 - tweak: hunter seek curve (day 22)
+- tweak: door/switch affordance (day 22)
