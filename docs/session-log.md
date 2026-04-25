@@ -638,3 +638,4 @@
 - wip: hunter seek curve (day 22)
 - debug: pointer lock + pause edge case (day 22)
 - audio: ringwell absorption (day 22)
+- tweak: touch look sensitivity (day 22)
