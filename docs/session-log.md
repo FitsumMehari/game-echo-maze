@@ -622,3 +622,4 @@
 - shader: decoy wall shader lie (day 22)
 - playtest: touch look sensitivity (day 22)
 - ui: spawn pulse on restart (day 22)
+- perf: menu copy clarity (day 22)
