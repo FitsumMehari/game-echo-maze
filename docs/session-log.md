@@ -628,3 +628,4 @@
 - ui: WebGL context lost copy (day 22)
 - note: spawn pulse on restart (day 22)
 - wip: WebGL context lost copy (day 22)
+- polish: win/lose overlay timing (day 22)
