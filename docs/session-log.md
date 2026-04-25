@@ -637,3 +637,4 @@
 - test: throw cooldown feel (day 22)
 - wip: hunter seek curve (day 22)
 - debug: pointer lock + pause edge case (day 22)
+- audio: ringwell absorption (day 22)
