@@ -611,3 +611,4 @@
 - refactor: win/lose overlay timing (day 21)
 - ui: pointer lock + pause edge case (day 21)
 - wip: win/lose overlay timing (day 22)
+- playtest: win/lose overlay timing (day 22)
