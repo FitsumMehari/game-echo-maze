@@ -614,3 +614,4 @@
 - playtest: win/lose overlay timing (day 22)
 - refactor: mobile drag look (day 22)
 - tweak: camera far plane (day 22)
+- tweak: echo debt decay (day 22)
