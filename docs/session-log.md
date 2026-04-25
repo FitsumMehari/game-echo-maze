@@ -619,3 +619,4 @@
 - test: door/switch affordance (day 22)
 - perf: door/switch affordance (day 22)
 - debug: hazard reset flow (day 22)
+- shader: decoy wall shader lie (day 22)
