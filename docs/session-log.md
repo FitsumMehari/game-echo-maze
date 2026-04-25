@@ -626,3 +626,4 @@
 - tweak: resonance charge curve (day 22)
 - test: resonance charge curve (day 22)
 - ui: WebGL context lost copy (day 22)
+- note: spawn pulse on restart (day 22)
