@@ -623,3 +623,4 @@
 - playtest: touch look sensitivity (day 22)
 - ui: spawn pulse on restart (day 22)
 - perf: menu copy clarity (day 22)
+- tweak: resonance charge curve (day 22)
