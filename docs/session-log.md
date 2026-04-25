@@ -630,3 +630,4 @@
 - wip: WebGL context lost copy (day 22)
 - polish: win/lose overlay timing (day 22)
 - playtest: decoy wall shader lie (day 22)
+- tweak: enemy mesh batching (day 22)
