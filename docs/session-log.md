@@ -634,3 +634,4 @@
 - tweak: hunter seek curve (day 22)
 - tweak: door/switch affordance (day 22)
 - audio: projectile bounce damping (day 22)
+- test: throw cooldown feel (day 22)
