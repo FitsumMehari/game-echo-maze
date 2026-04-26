@@ -650,3 +650,4 @@
 - tweak: merged geometry bounds (day 23)
 - perf: exit seal denial cue (day 23)
 - note: mobile drag look (day 23)
+- playtest: win/lose overlay timing (day 23)
