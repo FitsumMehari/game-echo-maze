@@ -656,3 +656,4 @@
 - ui: harmonic ping spacing (day 23)
 - tweak: hazard reset flow (day 23)
 - audio: keyboard repeat guard (day 23)
+- playtest: merged geometry bounds (day 23)
