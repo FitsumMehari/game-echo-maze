@@ -664,3 +664,4 @@
 - ui: WebGL context lost copy (day 23)
 - shader: WebGL context lost copy (day 23)
 - debug: stereo ping pan width (day 23)
+- audio: WebGL context lost copy (day 23)
