@@ -657,3 +657,4 @@
 - tweak: hazard reset flow (day 23)
 - audio: keyboard repeat guard (day 23)
 - playtest: merged geometry bounds (day 23)
+- perf: stereo ping pan width (day 23)
