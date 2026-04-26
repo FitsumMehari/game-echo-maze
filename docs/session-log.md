@@ -665,3 +665,4 @@
 - shader: WebGL context lost copy (day 23)
 - debug: stereo ping pan width (day 23)
 - audio: WebGL context lost copy (day 23)
+- note: camera far plane (day 23)
