@@ -666,3 +666,4 @@
 - debug: stereo ping pan width (day 23)
 - audio: WebGL context lost copy (day 23)
 - note: camera far plane (day 23)
+- perf: hazard reset flow (day 23)
