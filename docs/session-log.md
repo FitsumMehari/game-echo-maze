@@ -644,3 +644,4 @@
 - balance: hunter seek curve (day 23)
 - perf: enemy mesh batching (day 23)
 - wip: silence dividend gate (day 23)
+- refactor: merged geometry bounds (day 23)
