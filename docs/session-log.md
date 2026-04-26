@@ -652,3 +652,4 @@
 - note: mobile drag look (day 23)
 - playtest: win/lose overlay timing (day 23)
 - refactor: harmonic ping spacing (day 23)
+- note: hazard reset flow (day 23)
