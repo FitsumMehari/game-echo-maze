@@ -642,3 +642,4 @@
 - debug: hazard reset flow (day 22)
 - debug: menu copy clarity (day 23)
 - balance: hunter seek curve (day 23)
+- perf: enemy mesh batching (day 23)
