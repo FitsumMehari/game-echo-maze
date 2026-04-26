@@ -669,3 +669,4 @@
 - perf: hazard reset flow (day 23)
 - note: stereo ping pan width (day 23)
 - shader: enemy mesh batching (day 23)
+- note: WebGL context lost copy (day 23)
