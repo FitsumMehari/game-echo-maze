@@ -661,3 +661,4 @@
 - debug: tile absorption tuning (day 23)
 - debug: silence dividend gate (day 23)
 - ui: harmonic ping spacing (day 23)
+- ui: WebGL context lost copy (day 23)
