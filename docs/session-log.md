@@ -660,3 +660,4 @@
 - perf: stereo ping pan width (day 23)
 - debug: tile absorption tuning (day 23)
 - debug: silence dividend gate (day 23)
+- ui: harmonic ping spacing (day 23)
