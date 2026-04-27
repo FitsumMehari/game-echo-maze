@@ -676,3 +676,4 @@
 - audio: hunter seek curve (day 24)
 - polish: resonance charge curve (day 24)
 - refactor: touch look sensitivity (day 24)
+- wip: mobile drag look (day 24)
