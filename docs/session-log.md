@@ -683,3 +683,4 @@
 - test: silence dividend gate (day 24)
 - playtest: footstep pulse gain (day 24)
 - perf: fog density vs maze size (day 24)
+- ui: volume ramp on resume (day 24)
