@@ -694,3 +694,4 @@
 - test: ringwell absorption (day 24)
 - playtest: throw cooldown feel (day 24)
 - perf: projectile bounce damping (day 24)
+- debug: spawn pulse on restart (day 24)
