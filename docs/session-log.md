@@ -689,3 +689,4 @@
 - perf: pointer lock + pause edge case (day 24)
 - debug: pointer lock + pause edge case (day 24)
 - test: echo debt decay (day 24)
+- wip: harmonic ping spacing (day 24)
