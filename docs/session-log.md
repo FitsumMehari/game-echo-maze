@@ -696,3 +696,4 @@
 - perf: projectile bounce damping (day 24)
 - debug: spawn pulse on restart (day 24)
 - wip: projectile bounce damping (day 24)
+- shader: mobile drag look (day 24)
