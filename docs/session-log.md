@@ -687,3 +687,4 @@
 - debug: volume ramp on resume (day 24)
 - refactor: echo debt decay (day 24)
 - perf: pointer lock + pause edge case (day 24)
+- debug: pointer lock + pause edge case (day 24)
