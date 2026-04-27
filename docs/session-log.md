@@ -681,3 +681,4 @@
 - balance: decoy wall shader lie (day 24)
 - refactor: WebGL context lost copy (day 24)
 - test: silence dividend gate (day 24)
+- playtest: footstep pulse gain (day 24)
