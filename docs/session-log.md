@@ -685,3 +685,4 @@
 - perf: fog density vs maze size (day 24)
 - ui: volume ramp on resume (day 24)
 - debug: volume ramp on resume (day 24)
+- refactor: echo debt decay (day 24)
