@@ -692,3 +692,4 @@
 - wip: harmonic ping spacing (day 24)
 - audio: resonance charge curve (day 24)
 - test: ringwell absorption (day 24)
+- playtest: throw cooldown feel (day 24)
