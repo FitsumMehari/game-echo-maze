@@ -678,3 +678,4 @@
 - refactor: touch look sensitivity (day 24)
 - wip: mobile drag look (day 24)
 - note: harmonic twin-ring decay (day 24)
+- balance: decoy wall shader lie (day 24)
