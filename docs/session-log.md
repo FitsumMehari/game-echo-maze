@@ -672,3 +672,4 @@
 - note: WebGL context lost copy (day 23)
 - audio: tile absorption tuning (day 24)
 - debug: pointer lock + pause edge case (day 24)
+- ui: fog density vs maze size (day 24)
