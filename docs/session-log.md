@@ -674,3 +674,4 @@
 - debug: pointer lock + pause edge case (day 24)
 - ui: fog density vs maze size (day 24)
 - audio: hunter seek curve (day 24)
+- polish: resonance charge curve (day 24)
