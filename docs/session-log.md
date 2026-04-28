@@ -719,3 +719,4 @@
 - note: keyboard repeat guard (day 25)
 - refactor: hazard reset flow (day 25)
 - tweak: spawn pulse on restart (day 25)
+- ui: win/lose overlay timing (day 25)
