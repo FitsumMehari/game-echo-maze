@@ -713,3 +713,4 @@
 - wip: throw cooldown feel (day 25)
 - audio: camera far plane (day 25)
 - wip: harmonic ping spacing (day 25)
+- refactor: throw cooldown feel (day 25)
