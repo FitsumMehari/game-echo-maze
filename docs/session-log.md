@@ -715,3 +715,4 @@
 - wip: harmonic ping spacing (day 25)
 - refactor: throw cooldown feel (day 25)
 - test: volume ramp on resume (day 25)
+- tweak: merged geometry bounds (day 25)
