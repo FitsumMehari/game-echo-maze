@@ -705,3 +705,4 @@
 - test: echo debt decay (day 25)
 - perf: hazard reset flow (day 25)
 - tweak: enemy mesh batching (day 25)
+- balance: merged geometry bounds (day 25)
