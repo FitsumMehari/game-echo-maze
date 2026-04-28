@@ -722,3 +722,4 @@
 - ui: win/lose overlay timing (day 25)
 - audio: tile absorption tuning (day 25)
 - debug: throw cooldown feel (day 25)
+- balance: camera far plane (day 25)
