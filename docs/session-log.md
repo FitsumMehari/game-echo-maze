@@ -702,3 +702,4 @@
 - test: silence dividend gate (day 24)
 - wip: decoy wall shader lie (day 25)
 - polish: volume ramp on resume (day 25)
+- test: echo debt decay (day 25)
