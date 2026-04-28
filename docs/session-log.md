@@ -716,3 +716,4 @@
 - refactor: throw cooldown feel (day 25)
 - test: volume ramp on resume (day 25)
 - tweak: merged geometry bounds (day 25)
+- note: keyboard repeat guard (day 25)
