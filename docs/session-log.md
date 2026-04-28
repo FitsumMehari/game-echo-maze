@@ -726,3 +726,4 @@
 - polish: camera far plane (day 25)
 - perf: decoy wall shader lie (day 25)
 - shader: touch look sensitivity (day 25)
+- polish: fog density vs maze size (day 25)
