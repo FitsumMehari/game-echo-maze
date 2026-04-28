@@ -706,3 +706,4 @@
 - perf: hazard reset flow (day 25)
 - tweak: enemy mesh batching (day 25)
 - balance: merged geometry bounds (day 25)
+- audio: decoy wall shader lie (day 25)
