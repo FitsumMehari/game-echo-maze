@@ -721,3 +721,4 @@
 - tweak: spawn pulse on restart (day 25)
 - ui: win/lose overlay timing (day 25)
 - audio: tile absorption tuning (day 25)
+- debug: throw cooldown feel (day 25)
