@@ -707,3 +707,4 @@
 - tweak: enemy mesh batching (day 25)
 - balance: merged geometry bounds (day 25)
 - audio: decoy wall shader lie (day 25)
+- wip: sector HUD readability (day 25)
