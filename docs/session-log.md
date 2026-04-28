@@ -710,3 +710,4 @@
 - wip: sector HUD readability (day 25)
 - audio: volume ramp on resume (day 25)
 - refactor: camera far plane (day 25)
+- wip: throw cooldown feel (day 25)
