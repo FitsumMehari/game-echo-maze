@@ -728,3 +728,4 @@
 - shader: touch look sensitivity (day 25)
 - polish: fog density vs maze size (day 25)
 - polish: menu copy clarity (day 25)
+- shader: throw cooldown feel (day 25)
