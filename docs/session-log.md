@@ -750,3 +750,4 @@
 - balance: exit seal denial cue (day 26)
 - audio: volume ramp on resume (day 26)
 - refactor: tile absorption tuning (day 26)
+- debug: fog density vs maze size (day 26)
