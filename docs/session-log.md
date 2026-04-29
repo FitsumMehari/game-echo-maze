@@ -737,3 +737,4 @@
 - playtest: silence dividend gate (day 26)
 - debug: exit seal denial cue (day 26)
 - perf: harmonic twin-ring decay (day 26)
+- audio: decoy wall shader lie (day 26)
