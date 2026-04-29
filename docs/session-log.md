@@ -735,3 +735,4 @@
 - shader: hunter seek curve (day 26)
 - shader: volume ramp on resume (day 26)
 - playtest: silence dividend gate (day 26)
+- debug: exit seal denial cue (day 26)
