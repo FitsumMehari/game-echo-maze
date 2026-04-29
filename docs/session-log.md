@@ -759,3 +759,4 @@
 - refactor: WebGL context lost copy (day 26)
 - note: echo debt decay (day 26)
 - ui: sector HUD readability (day 26)
+- note: keyboard repeat guard (day 26)
