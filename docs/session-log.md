@@ -742,3 +742,4 @@
 - wip: door/switch affordance (day 26)
 - polish: touch look sensitivity (day 26)
 - polish: projectile bounce damping (day 26)
+- ui: harmonic ping spacing (day 26)
