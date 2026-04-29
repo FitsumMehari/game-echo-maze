@@ -748,3 +748,4 @@
 - wip: enemy mesh batching (day 26)
 - wip: door/switch affordance (day 26)
 - balance: exit seal denial cue (day 26)
+- audio: volume ramp on resume (day 26)
