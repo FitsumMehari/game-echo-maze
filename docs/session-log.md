@@ -755,3 +755,4 @@
 - playtest: throw cooldown feel (day 26)
 - refactor: resonance charge curve (day 26)
 - shader: merged geometry bounds (day 26)
+- shader: harmonic ping spacing (day 26)
