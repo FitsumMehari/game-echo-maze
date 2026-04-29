@@ -734,3 +734,4 @@
 - debug: stereo ping pan width (day 26)
 - shader: hunter seek curve (day 26)
 - shader: volume ramp on resume (day 26)
+- playtest: silence dividend gate (day 26)
