@@ -746,3 +746,4 @@
 - playtest: keyboard repeat guard (day 26)
 - shader: menu copy clarity (day 26)
 - wip: enemy mesh batching (day 26)
+- wip: door/switch affordance (day 26)
