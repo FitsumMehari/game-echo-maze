@@ -749,3 +749,4 @@
 - wip: door/switch affordance (day 26)
 - balance: exit seal denial cue (day 26)
 - audio: volume ramp on resume (day 26)
+- refactor: tile absorption tuning (day 26)
