@@ -757,3 +757,4 @@
 - shader: merged geometry bounds (day 26)
 - shader: harmonic ping spacing (day 26)
 - refactor: WebGL context lost copy (day 26)
+- note: echo debt decay (day 26)
