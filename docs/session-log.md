@@ -747,3 +747,4 @@
 - shader: menu copy clarity (day 26)
 - wip: enemy mesh batching (day 26)
 - wip: door/switch affordance (day 26)
+- balance: exit seal denial cue (day 26)
