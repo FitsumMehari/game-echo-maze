@@ -758,3 +758,4 @@
 - shader: harmonic ping spacing (day 26)
 - refactor: WebGL context lost copy (day 26)
 - note: echo debt decay (day 26)
+- ui: sector HUD readability (day 26)
