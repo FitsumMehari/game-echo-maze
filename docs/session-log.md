@@ -736,3 +736,4 @@
 - shader: volume ramp on resume (day 26)
 - playtest: silence dividend gate (day 26)
 - debug: exit seal denial cue (day 26)
+- perf: harmonic twin-ring decay (day 26)
