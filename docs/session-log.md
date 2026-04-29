@@ -744,3 +744,4 @@
 - polish: projectile bounce damping (day 26)
 - ui: harmonic ping spacing (day 26)
 - playtest: keyboard repeat guard (day 26)
+- shader: menu copy clarity (day 26)
