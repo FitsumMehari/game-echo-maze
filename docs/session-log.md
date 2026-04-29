@@ -740,3 +740,4 @@
 - audio: decoy wall shader lie (day 26)
 - perf: spawn pulse on restart (day 26)
 - wip: door/switch affordance (day 26)
+- polish: touch look sensitivity (day 26)
