@@ -731,3 +731,4 @@
 - shader: throw cooldown feel (day 25)
 - tweak: fog density vs maze size (day 25)
 - audio: stereo ping pan width (day 26)
+- debug: stereo ping pan width (day 26)
