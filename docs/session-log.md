@@ -752,3 +752,4 @@
 - refactor: tile absorption tuning (day 26)
 - debug: fog density vs maze size (day 26)
 - refactor: throw cooldown feel (day 26)
+- playtest: throw cooldown feel (day 26)
