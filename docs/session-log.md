@@ -733,3 +733,4 @@
 - audio: stereo ping pan width (day 26)
 - debug: stereo ping pan width (day 26)
 - shader: hunter seek curve (day 26)
+- shader: volume ramp on resume (day 26)
