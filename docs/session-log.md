@@ -730,3 +730,4 @@
 - polish: menu copy clarity (day 25)
 - shader: throw cooldown feel (day 25)
 - tweak: fog density vs maze size (day 25)
+- audio: stereo ping pan width (day 26)
