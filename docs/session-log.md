@@ -771,3 +771,4 @@
 - balance: keyboard repeat guard (day 27)
 - test: menu copy clarity (day 27)
 - ui: ringwell absorption (day 27)
+- test: merged geometry bounds (day 27)
