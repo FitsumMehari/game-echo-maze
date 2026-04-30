@@ -784,3 +784,4 @@
 - ui: fog density vs maze size (day 27)
 - note: volume ramp on resume (day 27)
 - balance: win/lose overlay timing (day 27)
+- wip: echo debt decay (day 27)
