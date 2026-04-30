@@ -762,3 +762,4 @@
 - note: keyboard repeat guard (day 26)
 - audio: door/switch affordance (day 27)
 - test: harmonic ping spacing (day 27)
+- test: resonance charge curve (day 27)
