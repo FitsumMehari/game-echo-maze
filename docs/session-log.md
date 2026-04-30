@@ -788,3 +788,4 @@
 - audio: footstep pulse gain (day 27)
 - tweak: enemy mesh batching (day 27)
 - test: sector HUD readability (day 27)
+- playtest: volume ramp on resume (day 27)
