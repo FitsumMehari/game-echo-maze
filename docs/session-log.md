@@ -764,3 +764,4 @@
 - test: harmonic ping spacing (day 27)
 - test: resonance charge curve (day 27)
 - balance: ringwell absorption (day 27)
+- shader: enemy mesh batching (day 27)
