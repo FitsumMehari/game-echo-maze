@@ -787,3 +787,4 @@
 - wip: echo debt decay (day 27)
 - audio: footstep pulse gain (day 27)
 - tweak: enemy mesh batching (day 27)
+- test: sector HUD readability (day 27)
