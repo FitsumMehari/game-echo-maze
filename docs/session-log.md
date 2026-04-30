@@ -775,3 +775,4 @@
 - polish: resonance charge curve (day 27)
 - ui: touch look sensitivity (day 27)
 - note: menu copy clarity (day 27)
+- balance: echo debt decay (day 27)
