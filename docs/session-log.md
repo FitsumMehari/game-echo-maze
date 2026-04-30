@@ -761,3 +761,4 @@
 - ui: sector HUD readability (day 26)
 - note: keyboard repeat guard (day 26)
 - audio: door/switch affordance (day 27)
+- test: harmonic ping spacing (day 27)
