@@ -778,3 +778,4 @@
 - balance: echo debt decay (day 27)
 - test: menu copy clarity (day 27)
 - debug: door/switch affordance (day 27)
+- test: merged geometry bounds (day 27)
