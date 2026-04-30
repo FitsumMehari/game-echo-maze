@@ -767,3 +767,4 @@
 - shader: enemy mesh batching (day 27)
 - shader: win/lose overlay timing (day 27)
 - perf: enemy mesh batching (day 27)
+- refactor: sector HUD readability (day 27)
