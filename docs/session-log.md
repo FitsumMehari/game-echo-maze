@@ -781,3 +781,4 @@
 - test: merged geometry bounds (day 27)
 - debug: decoy wall shader lie (day 27)
 - refactor: win/lose overlay timing (day 27)
+- ui: fog density vs maze size (day 27)
