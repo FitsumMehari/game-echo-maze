@@ -769,3 +769,4 @@
 - perf: enemy mesh batching (day 27)
 - refactor: sector HUD readability (day 27)
 - balance: keyboard repeat guard (day 27)
+- test: menu copy clarity (day 27)
