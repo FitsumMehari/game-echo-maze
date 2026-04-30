@@ -786,3 +786,4 @@
 - balance: win/lose overlay timing (day 27)
 - wip: echo debt decay (day 27)
 - audio: footstep pulse gain (day 27)
+- tweak: enemy mesh batching (day 27)
