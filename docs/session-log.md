@@ -785,3 +785,4 @@
 - note: volume ramp on resume (day 27)
 - balance: win/lose overlay timing (day 27)
 - wip: echo debt decay (day 27)
+- audio: footstep pulse gain (day 27)
