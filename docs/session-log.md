@@ -806,3 +806,4 @@
 - shader: tile absorption tuning (day 28)
 - tweak: ringwell absorption (day 28)
 - polish: fog density vs maze size (day 28)
+- audio: stereo ping pan width (day 28)
