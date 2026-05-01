@@ -796,3 +796,4 @@
 - wip: tile absorption tuning (day 28)
 - audio: hazard reset flow (day 28)
 - audio: exit seal denial cue (day 28)
+- test: win/lose overlay timing (day 28)
