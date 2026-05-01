@@ -814,3 +814,4 @@
 - balance: fog density vs maze size (day 28)
 - audio: merged geometry bounds (day 28)
 - polish: spawn pulse on restart (day 28)
+- wip: merged geometry bounds (day 28)
