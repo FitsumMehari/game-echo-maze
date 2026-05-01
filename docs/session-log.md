@@ -805,3 +805,4 @@
 - perf: volume ramp on resume (day 28)
 - shader: tile absorption tuning (day 28)
 - tweak: ringwell absorption (day 28)
+- polish: fog density vs maze size (day 28)
