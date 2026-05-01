@@ -799,3 +799,4 @@
 - test: win/lose overlay timing (day 28)
 - wip: fog density vs maze size (day 28)
 - shader: merged geometry bounds (day 28)
+- balance: win/lose overlay timing (day 28)
