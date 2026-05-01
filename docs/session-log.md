@@ -802,3 +802,4 @@
 - balance: win/lose overlay timing (day 28)
 - tweak: hazard reset flow (day 28)
 - refactor: win/lose overlay timing (day 28)
+- perf: volume ramp on resume (day 28)
