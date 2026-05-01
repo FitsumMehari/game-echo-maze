@@ -819,3 +819,4 @@
 - ui: camera far plane (day 28)
 - shader: menu copy clarity (day 28)
 - tweak: projectile bounce damping (day 28)
+- balance: enemy mesh batching (day 28)
