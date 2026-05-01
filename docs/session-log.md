@@ -791,3 +791,4 @@
 - playtest: volume ramp on resume (day 27)
 - audio: tile absorption tuning (day 27)
 - test: win/lose overlay timing (day 28)
+- perf: WebGL context lost copy (day 28)
