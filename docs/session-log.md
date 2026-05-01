@@ -795,3 +795,4 @@
 - audio: hunter seek curve (day 28)
 - wip: tile absorption tuning (day 28)
 - audio: hazard reset flow (day 28)
+- audio: exit seal denial cue (day 28)
