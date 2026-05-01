@@ -790,3 +790,4 @@
 - test: sector HUD readability (day 27)
 - playtest: volume ramp on resume (day 27)
 - audio: tile absorption tuning (day 27)
+- test: win/lose overlay timing (day 28)
