@@ -800,3 +800,4 @@
 - wip: fog density vs maze size (day 28)
 - shader: merged geometry bounds (day 28)
 - balance: win/lose overlay timing (day 28)
+- tweak: hazard reset flow (day 28)
