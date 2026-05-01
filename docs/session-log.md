@@ -808,3 +808,4 @@
 - polish: fog density vs maze size (day 28)
 - audio: stereo ping pan width (day 28)
 - refactor: throw cooldown feel (day 28)
+- shader: hazard reset flow (day 28)
