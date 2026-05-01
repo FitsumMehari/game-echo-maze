@@ -811,3 +811,4 @@
 - shader: hazard reset flow (day 28)
 - note: silence dividend gate (day 28)
 - playtest: camera far plane (day 28)
+- balance: fog density vs maze size (day 28)
