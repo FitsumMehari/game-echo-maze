@@ -818,3 +818,4 @@
 - tweak: resonance charge curve (day 28)
 - ui: camera far plane (day 28)
 - shader: menu copy clarity (day 28)
+- tweak: projectile bounce damping (day 28)
