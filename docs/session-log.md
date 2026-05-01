@@ -813,3 +813,4 @@
 - playtest: camera far plane (day 28)
 - balance: fog density vs maze size (day 28)
 - audio: merged geometry bounds (day 28)
+- polish: spawn pulse on restart (day 28)
