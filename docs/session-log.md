@@ -835,3 +835,4 @@
 - audio: hunter seek curve (day 29)
 - audio: exit seal denial cue (day 29)
 - polish: spawn pulse on restart (day 29)
+- refactor: keyboard repeat guard (day 29)
