@@ -836,3 +836,4 @@
 - audio: exit seal denial cue (day 29)
 - polish: spawn pulse on restart (day 29)
 - refactor: keyboard repeat guard (day 29)
+- tweak: hazard reset flow (day 29)
