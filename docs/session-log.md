@@ -845,3 +845,4 @@
 - balance: pointer lock + pause edge case (day 29)
 - tweak: enemy mesh batching (day 29)
 - tweak: keyboard repeat guard (day 29)
+- balance: decoy wall shader lie (day 29)
