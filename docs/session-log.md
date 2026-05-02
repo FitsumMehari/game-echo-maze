@@ -827,3 +827,4 @@
 - shader: WebGL context lost copy (day 29)
 - audio: touch look sensitivity (day 29)
 - polish: exit seal denial cue (day 29)
+- balance: throw cooldown feel (day 29)
