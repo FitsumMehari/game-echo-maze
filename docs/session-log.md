@@ -825,3 +825,4 @@
 - polish: harmonic ping spacing (day 29)
 - playtest: hunter seek curve (day 29)
 - shader: WebGL context lost copy (day 29)
+- audio: touch look sensitivity (day 29)
