@@ -821,3 +821,4 @@
 - tweak: projectile bounce damping (day 28)
 - balance: enemy mesh batching (day 28)
 - test: throw cooldown feel (day 29)
+- audio: enemy mesh batching (day 29)
