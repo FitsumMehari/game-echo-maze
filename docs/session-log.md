@@ -829,3 +829,4 @@
 - polish: exit seal denial cue (day 29)
 - balance: throw cooldown feel (day 29)
 - playtest: volume ramp on resume (day 29)
+- balance: pointer lock + pause edge case (day 29)
