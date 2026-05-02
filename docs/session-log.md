@@ -837,3 +837,4 @@
 - polish: spawn pulse on restart (day 29)
 - refactor: keyboard repeat guard (day 29)
 - tweak: hazard reset flow (day 29)
+- tweak: ringwell absorption (day 29)
