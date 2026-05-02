@@ -839,3 +839,4 @@
 - tweak: hazard reset flow (day 29)
 - tweak: ringwell absorption (day 29)
 - debug: ringwell absorption (day 29)
+- playtest: tile absorption tuning (day 29)
