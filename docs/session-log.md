@@ -823,3 +823,4 @@
 - test: throw cooldown feel (day 29)
 - audio: enemy mesh batching (day 29)
 - polish: harmonic ping spacing (day 29)
+- playtest: hunter seek curve (day 29)
