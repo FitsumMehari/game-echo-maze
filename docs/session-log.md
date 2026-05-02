@@ -844,3 +844,4 @@
 - wip: hunter seek curve (day 29)
 - balance: pointer lock + pause edge case (day 29)
 - tweak: enemy mesh batching (day 29)
+- tweak: keyboard repeat guard (day 29)
