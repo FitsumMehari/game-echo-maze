@@ -831,3 +831,4 @@
 - playtest: volume ramp on resume (day 29)
 - balance: pointer lock + pause edge case (day 29)
 - refactor: touch look sensitivity (day 29)
+- refactor: decoy wall shader lie (day 29)
