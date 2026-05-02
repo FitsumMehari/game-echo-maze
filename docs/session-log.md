@@ -848,3 +848,4 @@
 - balance: decoy wall shader lie (day 29)
 - shader: harmonic twin-ring decay (day 29)
 - note: hunter seek curve (day 29)
+- debug: enemy mesh batching (day 29)
