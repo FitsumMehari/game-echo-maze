@@ -842,3 +842,4 @@
 - playtest: tile absorption tuning (day 29)
 - tweak: merged geometry bounds (day 29)
 - wip: hunter seek curve (day 29)
+- balance: pointer lock + pause edge case (day 29)
