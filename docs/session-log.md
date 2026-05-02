@@ -840,3 +840,4 @@
 - tweak: ringwell absorption (day 29)
 - debug: ringwell absorption (day 29)
 - playtest: tile absorption tuning (day 29)
+- tweak: merged geometry bounds (day 29)
