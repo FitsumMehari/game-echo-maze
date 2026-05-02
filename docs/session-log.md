@@ -824,3 +824,4 @@
 - audio: enemy mesh batching (day 29)
 - polish: harmonic ping spacing (day 29)
 - playtest: hunter seek curve (day 29)
+- shader: WebGL context lost copy (day 29)
