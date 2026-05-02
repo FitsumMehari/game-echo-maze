@@ -849,3 +849,4 @@
 - shader: harmonic twin-ring decay (day 29)
 - note: hunter seek curve (day 29)
 - debug: enemy mesh batching (day 29)
+- ui: projectile bounce damping (day 29)
