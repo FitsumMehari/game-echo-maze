@@ -863,3 +863,4 @@
 - perf: menu copy clarity (day 30)
 - test: mobile drag look (day 30)
 - note: footstep pulse gain (day 30)
+- perf: echo debt decay (day 30)
