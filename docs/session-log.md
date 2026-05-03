@@ -871,3 +871,4 @@
 - refactor: keyboard repeat guard (day 30)
 - test: keyboard repeat guard (day 30)
 - note: throw cooldown feel (day 30)
+- tweak: merged geometry bounds (day 30)
