@@ -859,3 +859,4 @@
 - balance: decoy wall shader lie (day 30)
 - debug: door/switch affordance (day 30)
 - wip: hazard reset flow (day 30)
+- note: footstep pulse gain (day 30)
