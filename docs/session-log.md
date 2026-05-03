@@ -876,3 +876,4 @@
 - perf: silence dividend gate (day 30)
 - debug: resonance charge curve (day 30)
 - note: camera far plane (day 30)
+- note: silence dividend gate (day 30)
