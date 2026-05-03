@@ -850,3 +850,4 @@
 - note: hunter seek curve (day 29)
 - debug: enemy mesh batching (day 29)
 - ui: projectile bounce damping (day 29)
+- tweak: keyboard repeat guard (day 30)
