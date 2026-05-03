@@ -853,3 +853,4 @@
 - tweak: keyboard repeat guard (day 30)
 - ui: keyboard repeat guard (day 30)
 - debug: harmonic twin-ring decay (day 30)
+- debug: win/lose overlay timing (day 30)
