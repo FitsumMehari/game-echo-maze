@@ -870,3 +870,4 @@
 - shader: harmonic twin-ring decay (day 30)
 - refactor: keyboard repeat guard (day 30)
 - test: keyboard repeat guard (day 30)
+- note: throw cooldown feel (day 30)
