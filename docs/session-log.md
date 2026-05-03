@@ -864,3 +864,4 @@
 - test: mobile drag look (day 30)
 - note: footstep pulse gain (day 30)
 - perf: echo debt decay (day 30)
+- ui: win/lose overlay timing (day 30)
