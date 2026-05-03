@@ -851,3 +851,4 @@
 - debug: enemy mesh batching (day 29)
 - ui: projectile bounce damping (day 29)
 - tweak: keyboard repeat guard (day 30)
+- ui: keyboard repeat guard (day 30)
