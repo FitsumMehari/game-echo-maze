@@ -875,3 +875,4 @@
 - perf: stereo ping pan width (day 30)
 - perf: silence dividend gate (day 30)
 - debug: resonance charge curve (day 30)
+- note: camera far plane (day 30)
