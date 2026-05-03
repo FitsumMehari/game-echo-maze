@@ -866,3 +866,4 @@
 - perf: echo debt decay (day 30)
 - ui: win/lose overlay timing (day 30)
 - shader: merged geometry bounds (day 30)
+- note: silence dividend gate (day 30)
