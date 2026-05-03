@@ -865,3 +865,4 @@
 - note: footstep pulse gain (day 30)
 - perf: echo debt decay (day 30)
 - ui: win/lose overlay timing (day 30)
+- shader: merged geometry bounds (day 30)
