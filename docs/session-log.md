@@ -873,3 +873,4 @@
 - note: throw cooldown feel (day 30)
 - tweak: merged geometry bounds (day 30)
 - perf: stereo ping pan width (day 30)
+- perf: silence dividend gate (day 30)
