@@ -858,3 +858,4 @@
 - balance: merged geometry bounds (day 30)
 - balance: decoy wall shader lie (day 30)
 - debug: door/switch affordance (day 30)
+- wip: hazard reset flow (day 30)
