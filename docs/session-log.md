@@ -878,3 +878,4 @@
 - note: camera far plane (day 30)
 - note: silence dividend gate (day 30)
 - refactor: merged geometry bounds (day 30)
+- perf: hunter seek curve (day 30)
