@@ -855,3 +855,4 @@
 - debug: harmonic twin-ring decay (day 30)
 - debug: win/lose overlay timing (day 30)
 - wip: win/lose overlay timing (day 30)
+- balance: merged geometry bounds (day 30)
