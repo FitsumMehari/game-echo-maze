@@ -856,3 +856,4 @@
 - debug: win/lose overlay timing (day 30)
 - wip: win/lose overlay timing (day 30)
 - balance: merged geometry bounds (day 30)
+- balance: decoy wall shader lie (day 30)
