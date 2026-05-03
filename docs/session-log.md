@@ -852,3 +852,4 @@
 - ui: projectile bounce damping (day 29)
 - tweak: keyboard repeat guard (day 30)
 - ui: keyboard repeat guard (day 30)
+- debug: harmonic twin-ring decay (day 30)
