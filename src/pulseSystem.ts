@@ -79,5 +79,7 @@ export function createPulseUniforms(): Record<string, { value: unknown }> {
     uPulseSpeed: { value: new Float32Array(MAX_PULSES) },
     uPulseStrength: { value: new Float32Array(MAX_PULSES) },
     uPulseDecay: { value: new Float32Array(MAX_PULSES) },
+    uThemeMode: { value: 0 },
+    uVisualAssist: { value: 0 },
   };
 }

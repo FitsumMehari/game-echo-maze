@@ -1,460 +1,307 @@
 import "./style.css";
 import { AudioEngine } from "./audioEngine";
 import { Game } from "./game";
+import { MultiplayerClient } from "./multiplayer";
+import { drawRadar } from "./radar";
+import { buildUi, type UiRefs } from "./ui";
 import { formatTimeShort } from "./format";
-import { loadSettings, saveSettings, type GameSettings } from "./settings";
+import { getMissionConfig, loadCampaignProgress, MAX_MISSION_LEVEL, missionOptions, unlockNextMission } from "./campaign";
+import { loadSettings, saveSettings, type GameSettings, type PlayMode, type ThemeId } from "./settings";
 
 function webgl2Available(): boolean {
-  try {
-    const c = document.createElement("canvas");
-    return !!c.getContext("webgl2");
-  } catch {
-    return false;
-  }
+  try { return !!document.createElement("canvas").getContext("webgl2"); } catch { return false; }
 }
 
 const appRoot = document.querySelector<HTMLDivElement>("#app");
 if (!appRoot) throw new Error("#app missing");
 
 if (!webgl2Available()) {
-  appRoot.innerHTML = `
-    <div class="fatal">
-      <h1>WebGL&nbsp;2 required</h1>
-      <p>Echo Maze needs WebGL&nbsp;2 (hardware acceleration). Enable GPU acceleration in your browser settings or update your GPU drivers, then reload.</p>
-      <button type="button" id="fatal-reload">Reload</button>
-    </div>`;
-  appRoot.querySelector("#fatal-reload")?.addEventListener("click", () => location.reload());
-} else {
-  boot(appRoot);
+  fatal(appRoot, "WebGL&nbsp;2 required", "Echo Maze needs WebGL&nbsp;2 and hardware acceleration. Enable GPU acceleration or update your browser, then reload.");
+} else boot(appRoot);
+
+function fatal(root: HTMLDivElement, title: string, body: string): void {
+  root.innerHTML = `<div class="fatal"><h1>${title}</h1><p>${body}</p><button type="button" id="fatal-reload">Reload</button></div>`;
+  root.querySelector("#fatal-reload")?.addEventListener("click", () => location.reload());
 }
 
 function boot(root: HTMLDivElement): void {
   const audio = new AudioEngine();
   let game: Game;
-  try {
-    game = new Game(audio);
-  } catch (err) {
-    console.error(err);
-    root.innerHTML = `
-      <div class="fatal">
-        <h1>Could not start renderer</h1>
-        <p>Your GPU or browser blocked WebGL. Try another browser or enable hardware acceleration.</p>
-        <button type="button" id="fatal-reload">Reload</button>
-      </div>`;
-    root.querySelector("#fatal-reload")?.addEventListener("click", () => location.reload());
-    return;
-  }
-
-  let settings: GameSettings = loadSettings();
-
-  const wrap = document.createElement("div");
-  wrap.className = "game-wrap";
-  wrap.appendChild(game.renderer.domElement);
-
-  const crosshair = document.createElement("div");
-  crosshair.className = "crosshair";
-  crosshair.setAttribute("aria-hidden", "true");
-
-  const hud = document.createElement("div");
-  hud.className = "hud";
-  hud.innerHTML = `
-    <div class="hud-top">
-      <span id="hud-time" class="hud-time" role="timer" aria-live="polite">0:00</span>
-      <span id="hud-sector" class="hud-sector" aria-hidden="true"></span>
-      <span class="hud-brand">Echo Maze</span>
-    </div>
-    <div class="hud-meters" aria-hidden="true">
-      <div class="meter-row"><span class="meter-name">Resonance</span><div class="meter-track"><div id="meter-res" class="meter-fill res"></div></div></div>
-      <div class="meter-row"><span class="meter-name heat">Echo heat</span><div class="meter-track"><div id="meter-debt" class="meter-fill debt"></div></div></div>
-    </div>
-    <div id="hud-hints" class="hud-body">
-      <p class="hud-line"><kbd>WASD</kbd> · <kbd>Shift</kbd> quiet · <kbd>Space</kbd> ping · at high Resonance → <strong>harmonic</strong> twin-ring · <kbd>F</kbd> throw · <kbd>R</kbd> · <kbd>Esc</kbd></p>
-      <p class="hud-tip">The maze stays <strong>dim</strong>—<kbd>Space</kbd> paints detail in sound. <strong>Ringwells</strong> (+) amplify footsteps. Grab the <strong>echo key</strong> or the exit stays sealed. <strong>Echo heat</strong> speeds hunters. Keep heat low ~4s for a <strong>silence dividend</strong> (+Resonance). Violet walls <em>lie</em>—their false echo breathes.</p>
-    </div>
-  `;
-
-  const overlay = document.createElement("div");
-  overlay.className = "overlay";
-  overlay.innerHTML = `
-    <div class="panel" id="panel-menu" role="dialog" aria-labelledby="menu-title">
-      <p class="tagline">Sonar stealth exploration</p>
-      <h1 id="menu-title">Echo Maze</h1>
-      <p><strong>Resonance</strong> fills when you stand still or sneak—then <strong>Space</strong> can unleash a <em>harmonic</em> twin-ring ping. Loud moves, pings, and throws bank <strong>Echo heat</strong>; hunters run hotter when heat is high. Keep heat low to build a <strong>silence dividend</strong> (+Resonance). Find the <strong>echo key</strong> or the exit hums shut.</p>
-      <fieldset class="settings-field">
-        <legend>Settings</legend>
-        <label class="field">Mouse sensitivity
-          <input type="range" id="set-mouse-menu" min="0.35" max="2.5" step="0.05" value="1" />
-        </label>
-        <label class="field">Volume
-          <input type="range" id="set-vol-menu" min="0" max="1" step="0.01" value="0.85" />
-        </label>
-        <label class="field tick">
-          <input type="checkbox" id="set-hud-menu" checked /> Show control hints in-game
-        </label>
-      </fieldset>
-      <p class="fine">Use headphones. Click <strong>Begin</strong> and allow audio if prompted.</p>
-      <div class="btn-row">
-        <button type="button" id="btn-start" class="btn-primary">Begin</button>
-      </div>
-      <p class="credits">A WebGL study · Three.js · procedural audio</p>
-    </div>
-
-    <div class="panel hidden" id="panel-pause" role="dialog" aria-labelledby="pause-title">
-      <h2 id="pause-title">Paused</h2>
-      <fieldset class="settings-field">
-        <legend>Settings</legend>
-        <label class="field">Mouse sensitivity
-          <input type="range" id="set-mouse-pause" min="0.35" max="2.5" step="0.05" />
-        </label>
-        <label class="field">Volume
-          <input type="range" id="set-vol-pause" min="0" max="1" step="0.01" />
-        </label>
-        <label class="field tick">
-          <input type="checkbox" id="set-hud-pause" /> Show control hints
-        </label>
-      </fieldset>
-      <div class="btn-row split">
-        <button type="button" id="btn-resume" class="btn-primary">Resume</button>
-        <button type="button" id="btn-restart-pause" class="btn-ghost">Restart run</button>
-      </div>
-      <button type="button" id="btn-title-pause" class="btn-text">Return to title</button>
-    </div>
-
-    <div class="panel hidden" id="panel-won" role="dialog" aria-labelledby="won-title">
-      <h2 id="won-title">Escaped</h2>
-      <p id="won-stats" class="stats" aria-live="polite"></p>
-      <p>You read the echoes well enough to slip past the gate.</p>
-      <div class="btn-row split">
-        <button type="button" id="btn-again-win" class="btn-primary">Play again</button>
-        <button type="button" id="btn-title-win" class="btn-ghost">Title</button>
-      </div>
-    </div>
-
-    <div class="panel hidden" id="panel-lost" role="dialog" aria-labelledby="lost-title">
-      <h2 id="lost-title">Caught</h2>
-      <p id="lost-stats" class="stats" aria-live="polite"></p>
-      <p>Hunters converged on your last loud footprint or ping.</p>
-      <div class="btn-row split">
-        <button type="button" id="btn-again-lost" class="btn-primary">Retry</button>
-        <button type="button" id="btn-title-lost" class="btn-ghost">Title</button>
-      </div>
-    </div>
-  `;
-
-  wrap.appendChild(crosshair);
-  wrap.appendChild(hud);
-  wrap.appendChild(overlay);
-  root.appendChild(wrap);
-
-  const hudHints = hud.querySelector<HTMLDivElement>("#hud-hints")!;
-  const hudTime = hud.querySelector<HTMLSpanElement>("#hud-time")!;
-  const hudSector = hud.querySelector<HTMLSpanElement>("#hud-sector")!;
-  const meterRes = hud.querySelector<HTMLDivElement>("#meter-res")!;
-  const meterDebt = hud.querySelector<HTMLDivElement>("#meter-debt")!;
-  const panelMenu = overlay.querySelector<HTMLDivElement>("#panel-menu")!;
-  const panelPause = overlay.querySelector<HTMLDivElement>("#panel-pause")!;
-  const panelWon = overlay.querySelector<HTMLDivElement>("#panel-won")!;
-  const panelLost = overlay.querySelector<HTMLDivElement>("#panel-lost")!;
-  const wonStats = overlay.querySelector<HTMLParagraphElement>("#won-stats")!;
-  const lostStats = overlay.querySelector<HTMLParagraphElement>("#lost-stats")!;
-
-  const btnStart = overlay.querySelector<HTMLButtonElement>("#btn-start")!;
-  const btnResume = overlay.querySelector<HTMLButtonElement>("#btn-resume")!;
-  const btnRestartPause = overlay.querySelector<HTMLButtonElement>("#btn-restart-pause")!;
-  const btnTitlePause = overlay.querySelector<HTMLButtonElement>("#btn-title-pause")!;
-  const btnAgainWin = overlay.querySelector<HTMLButtonElement>("#btn-again-win")!;
-  const btnTitleWin = overlay.querySelector<HTMLButtonElement>("#btn-title-win")!;
-  const btnAgainLost = overlay.querySelector<HTMLButtonElement>("#btn-again-lost")!;
-  const btnTitleLost = overlay.querySelector<HTMLButtonElement>("#btn-title-lost")!;
-
-  const setMouseMenu = overlay.querySelector<HTMLInputElement>("#set-mouse-menu")!;
-  const setVolMenu = overlay.querySelector<HTMLInputElement>("#set-vol-menu")!;
-  const setHudMenu = overlay.querySelector<HTMLInputElement>("#set-hud-menu")!;
-  const setMousePause = overlay.querySelector<HTMLInputElement>("#set-mouse-pause")!;
-  const setVolPause = overlay.querySelector<HTMLInputElement>("#set-vol-pause")!;
-  const setHudPause = overlay.querySelector<HTMLInputElement>("#set-hud-pause")!;
-
+  try { game = new Game(audio); } catch (err) { console.error(err); fatal(root, "Could not start renderer", "Your GPU or browser blocked WebGL. Try another browser or enable hardware acceleration."); return; }
+  const ui = buildUi(root, game.renderer.domElement);
+  const mp = new MultiplayerClient();
+  let settings = loadSettings();
+  let unlockedMission = loadCampaignProgress();
+  settings.selectedMission = Math.min(settings.selectedMission, unlockedMission);
   const keys = new Set<string>();
   let pointerLocked = false;
   let dragLook = false;
   let lastMouse = { x: 0, y: 0 };
   let lastTouch: { x: number; y: number } | null = null;
 
+  const input = <T extends HTMLInputElement | HTMLSelectElement>(id: string): T => ui.inputs[id] as T;
+  const mirrorIds = (base: string) => [`${base}-menu`, `${base}-pause`];
+
   function applySettingsToInputs(): void {
-    setMouseMenu.value = String(settings.mouseSensitivity);
-    setVolMenu.value = String(settings.masterVolume);
-    setHudMenu.checked = settings.showHudHints;
-    setMousePause.value = String(settings.mouseSensitivity);
-    setVolPause.value = String(settings.masterVolume);
-    setHudPause.checked = settings.showHudHints;
+    input<HTMLSelectElement>("mission-level").innerHTML = missionOptions(settings.selectedMission, unlockedMission);
+    for (const scope of ["menu", "pause"] as const) {
+      input<HTMLInputElement>(`set-mouse-${scope}`).value = String(settings.mouseSensitivity);
+      input<HTMLInputElement>(`set-vol-${scope}`).value = String(settings.masterVolume);
+      input<HTMLInputElement>(`set-sfx-${scope}`).value = String(settings.sfxVolume);
+      input<HTMLInputElement>(`set-amb-${scope}`).value = String(settings.ambienceVolume);
+      input<HTMLInputElement>(`set-hud-${scope}`).checked = settings.showHudHints;
+      input<HTMLInputElement>(`set-radar-${scope}`).checked = settings.showRadar;
+      input<HTMLInputElement>(`set-assist-${scope}`).checked = settings.visualAssist;
+      input<HTMLSelectElement>(`set-theme-${scope}`).value = settings.theme;
+    }
+    input<HTMLSelectElement>("mission-level").value = String(settings.selectedMission);
+    input<HTMLSelectElement>("play-mode").value = settings.playMode;
+    input<HTMLInputElement>("mp-name").value = settings.playerName;
+    input<HTMLInputElement>("mp-room").value = settings.roomCode;
+    input<HTMLInputElement>("mp-url").value = settings.relayUrl;
   }
+
+  function persist(): void { saveSettings(settings); }
 
   function applySettingsToGame(): void {
     game.mouseLookMul = settings.mouseSensitivity;
-    audio.ensure();
-    audio.setMasterVolume(settings.masterVolume);
-    const hideHints = !settings.showHudHints && game.phase === "playing";
-    hudHints.classList.toggle("hidden", hideHints);
+    game.setVisuals(settings.theme, settings.visualAssist);
+    document.documentElement.dataset.theme = settings.theme;
+    document.documentElement.classList.toggle("visual-assist", settings.visualAssist);
+    audio.setMix(settings.masterVolume, settings.sfxVolume, settings.ambienceVolume);
+    ui.hudHints.classList.toggle("hidden", !settings.showHudHints && game.phase === "playing");
+    ui.radar.classList.toggle("hidden", !settings.showRadar || game.phase !== "playing");
+    updateCampaignText();
   }
 
-  function wireMirrorRanges(
-    a: HTMLInputElement,
-    b: HTMLInputElement,
-    key: "mouseSensitivity" | "masterVolume",
-  ): void {
-    const push = (src: HTMLInputElement): void => {
-      const v = parseFloat(src.value);
-      settings[key] = v;
-      a.value = String(v);
-      b.value = String(v);
-      saveSettings(settings);
-      applySettingsToGame();
-    };
-    a.addEventListener("input", () => push(a));
-    b.addEventListener("input", () => push(b));
+  function wireRange(base: string, key: "mouseSensitivity" | "masterVolume" | "sfxVolume" | "ambienceVolume"): void {
+    for (const id of mirrorIds(base)) input<HTMLInputElement>(id).addEventListener("input", (e) => {
+      const v = parseFloat((e.currentTarget as HTMLInputElement).value);
+      settings = { ...settings, [key]: v };
+      mirrorIds(base).forEach((x) => (input<HTMLInputElement>(x).value = String(v)));
+      persist(); applySettingsToGame();
+    });
   }
 
-  wireMirrorRanges(setMouseMenu, setMousePause, "mouseSensitivity");
-  wireMirrorRanges(setVolMenu, setVolPause, "masterVolume");
-
-  function wireMirrorHud(a: HTMLInputElement, b: HTMLInputElement): void {
-    const push = (src: HTMLInputElement): void => {
-      settings.showHudHints = src.checked;
-      a.checked = src.checked;
-      b.checked = src.checked;
-      saveSettings(settings);
-      applySettingsToGame();
-    };
-    a.addEventListener("change", () => push(a));
-    b.addEventListener("change", () => push(b));
+  function wireCheck(base: string, key: "showHudHints" | "showRadar" | "visualAssist"): void {
+    for (const id of mirrorIds(base)) input<HTMLInputElement>(id).addEventListener("change", (e) => {
+      const v = (e.currentTarget as HTMLInputElement).checked;
+      settings = { ...settings, [key]: v };
+      mirrorIds(base).forEach((x) => (input<HTMLInputElement>(x).checked = v));
+      persist(); applySettingsToGame();
+    });
   }
 
-  wireMirrorHud(setHudMenu, setHudPause);
+  for (const scope of ["menu", "pause"] as const) input<HTMLSelectElement>(`set-theme-${scope}`).addEventListener("change", (e) => {
+    settings.theme = (e.currentTarget as HTMLSelectElement).value as ThemeId;
+    input<HTMLSelectElement>("set-theme-menu").value = settings.theme;
+    input<HTMLSelectElement>("set-theme-pause").value = settings.theme;
+    persist(); applySettingsToGame();
+  });
+  wireRange("set-mouse", "mouseSensitivity");
+  wireRange("set-vol", "masterVolume");
+  wireRange("set-sfx", "sfxVolume");
+  wireRange("set-amb", "ambienceVolume");
+  wireCheck("set-hud", "showHudHints");
+  wireCheck("set-radar", "showRadar");
+  wireCheck("set-assist", "visualAssist");
 
-  applySettingsToInputs();
-  applySettingsToGame();
-
-  function showOverlay(which: "menu" | "pause" | "won" | "lost" | "none"): void {
-    panelMenu.classList.toggle("hidden", which !== "menu");
-    panelPause.classList.toggle("hidden", which !== "pause");
-    panelWon.classList.toggle("hidden", which !== "won");
-    panelLost.classList.toggle("hidden", which !== "lost");
-    overlay.classList.toggle("hidden", which === "none");
-    const hideHud = which === "menu" || which === "won" || which === "lost";
-    hud.classList.toggle("hidden", hideHud);
-    crosshair.classList.toggle("hidden", hideHud);
-    if (which === "won" || which === "lost") updateEndStats();
+  function updateCampaignText(): void {
+    const cfg = getMissionConfig(settings.selectedMission);
+    ui.campaignProgress.textContent = `${cfg.title}: ${cfg.briefing} Unlocked: ${unlockedMission}/${MAX_MISSION_LEVEL}. Complete it to open the next mission.`;
   }
+
+  input<HTMLSelectElement>("mission-level").addEventListener("change", (e) => {
+    settings.selectedMission = Math.min(Number((e.currentTarget as HTMLSelectElement).value) || 1, unlockedMission);
+    persist(); applySettingsToInputs(); updateCampaignText();
+  });
+  input<HTMLSelectElement>("play-mode").addEventListener("change", (e) => {
+    settings.playMode = (e.currentTarget as HTMLSelectElement).value as PlayMode;
+    if (settings.playMode === "single") mp.disconnect();
+    persist(); updateCampaignText();
+  });
+
+  function syncMpConfig(): void {
+    settings.playerName = input<HTMLInputElement>("mp-name").value.trim().slice(0, 24) || "Echo Runner";
+    settings.roomCode = input<HTMLInputElement>("mp-room").value.trim().toLowerCase().replace(/\s+/g, "-") || "lobby";
+    settings.relayUrl = input<HTMLInputElement>("mp-url").value.trim();
+    persist();
+    mp.configure(settings.roomCode, settings.playerName);
+  }
+  ["mp-name", "mp-room", "mp-url"].forEach((id) => input<HTMLInputElement>(id).addEventListener("change", syncMpConfig));
+  ui.btnLocal.addEventListener("click", () => { settings.playMode = "ghosts"; input<HTMLSelectElement>("play-mode").value = "ghosts"; syncMpConfig(); persist(); mp.connectLocal(); audio.playJoin(); });
+  ui.btnRelay.addEventListener("click", () => { settings.playMode = "ghosts"; input<HTMLSelectElement>("play-mode").value = "ghosts"; syncMpConfig(); persist(); mp.connectWebSocket(settings.relayUrl); audio.playJoin(); });
+  ui.btnDisconnect.addEventListener("click", () => mp.disconnect());
+  mp.onChange = (peers, status) => {
+    game.applyRemotePeers(settings.playMode === "ghosts" ? peers : []);
+    ui.live.textContent = `${status.label}${status.peers ? ` · ${status.peers} peer${status.peers === 1 ? "" : "s"}` : ""}`;
+    ui.mpChip.textContent = settings.playMode === "single" ? "Single player" : ui.live.textContent;
+  };
+
+  applySettingsToInputs(); syncMpConfig(); applySettingsToGame();
 
   function updateEndStats(): void {
     const s = game.lastRunSummary;
-    const line = s
-      ? `Time ${formatTimeShort(s.timeSec)} · ${s.pings} pings (${s.harmonics} harmonic) · ${s.throws} throws · heat ${Math.round(s.echoDebt * 100)}% · ${s.silenceBonuses} silence bonuses`
-      : "";
-    wonStats.textContent = line;
-    lostStats.textContent = line;
+    if (game.phase === "won" && s) {
+      unlockedMission = unlockNextMission(s.missionLevel);
+      settings.selectedMission = Math.min(MAX_MISSION_LEVEL, s.missionLevel + 1);
+      persist(); applySettingsToInputs(); updateCampaignText();
+    }
+    const line = s ? `Mission ${s.missionLevel}/${MAX_MISSION_LEVEL} · Time ${formatTimeShort(s.timeSec)} · ${s.pings} pings (${s.harmonics} harmonic) · ${s.focuses} focus scans · ${s.beacons} beacons · ${s.throws} throws · heat ${Math.round(s.echoDebt * 100)}% · ${s.silenceBonuses} silence bonuses` : "";
+    ui.wonStats.textContent = line;
+    ui.lostStats.textContent = line;
+    saveBestRun(s?.timeSec ?? null, game.phase, s?.missionLevel ?? game.missionLevel);
+  }
+
+  function showOverlay(which: "menu" | "pause" | "won" | "lost" | "none"): void {
+    ui.panelMenu.classList.toggle("hidden", which !== "menu");
+    ui.panelPause.classList.toggle("hidden", which !== "pause");
+    ui.panelWon.classList.toggle("hidden", which !== "won");
+    ui.panelLost.classList.toggle("hidden", which !== "lost");
+    ui.overlay.classList.toggle("hidden", which === "none");
+    const hideHud = which === "menu" || which === "won" || which === "lost";
+    ui.hud.classList.toggle("hidden", hideHud);
+    ui.crosshair.classList.toggle("hidden", hideHud);
+    ui.radar.classList.toggle("hidden", hideHud || !settings.showRadar);
+    if (which === "won") ui.btnAgainWin.textContent = game.missionLevel >= MAX_MISSION_LEVEL ? "Replay finale" : `Next mission ${game.missionLevel + 1}`;
+    if (which === "won" || which === "lost") updateEndStats();
   }
 
   function syncPanels(): void {
     if (game.phase === "menu") showOverlay("menu");
-    else if (game.phase === "paused") {
-      applySettingsToInputs();
-      showOverlay("pause");
-    } else if (game.phase === "won") showOverlay("won");
+    else if (game.phase === "paused") { applySettingsToInputs(); showOverlay("pause"); }
+    else if (game.phase === "won") showOverlay("won");
     else if (game.phase === "lost") showOverlay("lost");
     else showOverlay("none");
     applySettingsToGame();
   }
 
-  async function begin(): Promise<void> {
-    await audio.resume();
-    audio.setMasterVolume(settings.masterVolume);
-    game.startPlaying();
-    syncPanels();
-    await game.renderer.domElement.requestPointerLock().catch(() => {});
+  function requestGamePointerLock(): void {
+    const request = game.renderer.domElement.requestPointerLock?.bind(game.renderer.domElement);
+    if (!request || document.pointerLockElement === game.renderer.domElement) return;
+    try {
+      const result = request() as Promise<void> | undefined;
+      void result?.catch(() => { /* pointer lock is optional */ });
+    } catch {
+      /* pointer lock is optional on mobile / restricted browsers */
+    }
   }
 
-  btnStart.addEventListener("click", () => void begin());
-  btnResume.addEventListener("click", () => {
-    game.phase = "playing";
-    syncPanels();
-    void game.renderer.domElement.requestPointerLock().catch(() => {});
-  });
-  btnRestartPause.addEventListener("click", () => {
-    game.resetLevel();
-    syncPanels();
-    void game.renderer.domElement.requestPointerLock().catch(() => {});
-  });
-  btnTitlePause.addEventListener("click", () => {
-    game.goToMenu();
-    syncPanels();
-    document.exitPointerLock();
-  });
-  btnAgainWin.addEventListener("click", () => void begin());
-  btnAgainLost.addEventListener("click", () => void begin());
-  btnTitleWin.addEventListener("click", () => {
-    game.goToMenu();
-    syncPanels();
-  });
-  btnTitleLost.addEventListener("click", () => {
-    game.goToMenu();
-    syncPanels();
-  });
+  function startAudioUnlocked(): void {
+    void audio.resume().catch((err) => {
+      console.warn("Audio unlock failed; continuing silently", err);
+    });
+  }
+
+  async function begin(level = settings.selectedMission): Promise<void> {
+    ui.btnStart.disabled = true;
+    ui.btnStart.textContent = "Starting…";
+    try {
+      settings.selectedMission = Math.max(1, Math.min(unlockedMission, Math.min(MAX_MISSION_LEVEL, Math.round(level))));
+      persist(); applySettingsToInputs(); applySettingsToGame();
+      game.startPlaying(settings.selectedMission);
+      syncPanels();
+      startAudioUnlocked();
+      requestGamePointerLock();
+    } catch (err) {
+      console.error(err);
+      game.goToMenu();
+      syncPanels();
+      ui.campaignProgress.textContent = "Could not start this mission. Check the browser console, reload, or try Mission 1.";
+    } finally {
+      ui.btnStart.disabled = false;
+      ui.btnStart.textContent = "Begin mission";
+    }
+  }
+
+  ui.btnStart.addEventListener("click", () => void begin());
+  ui.btnResume.addEventListener("click", () => { game.phase = "playing"; syncPanels(); requestGamePointerLock(); startAudioUnlocked(); });
+  ui.btnRestartPause.addEventListener("click", () => { game.resetLevel(); syncPanels(); requestGamePointerLock(); startAudioUnlocked(); });
+  ui.btnTitlePause.addEventListener("click", () => { game.goToMenu(); syncPanels(); document.exitPointerLock(); });
+  ui.btnAgainWin.addEventListener("click", () => void begin(Math.min(MAX_MISSION_LEVEL, game.missionLevel + 1)));
+  ui.btnAgainLost.addEventListener("click", () => void begin(game.missionLevel));
+  ui.btnTitleWin.addEventListener("click", () => { game.goToMenu(); syncPanels(); });
+  ui.btnTitleLost.addEventListener("click", () => { game.goToMenu(); syncPanels(); });
 
   window.addEventListener("keydown", (e) => {
     keys.add(e.code);
-
+    if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.code)) e.preventDefault();
     if (e.code === "Escape") {
-      if (game.phase === "playing") {
-        game.phase = "paused";
-        syncPanels();
-        document.exitPointerLock();
-      } else if (game.phase === "paused") {
-        game.phase = "playing";
-        syncPanels();
-        void game.renderer.domElement.requestPointerLock().catch(() => {});
-      }
+      if (game.phase === "playing") { game.phase = "paused"; syncPanels(); document.exitPointerLock(); }
+      else if (game.phase === "paused") { game.phase = "playing"; syncPanels(); requestGamePointerLock(); startAudioUnlocked(); }
       return;
     }
-
-    if (e.repeat) return;
-
-    if (game.phase === "playing") {
-      if (e.code === "Space") {
-        e.preventDefault();
-        game.tryPing();
-      }
-      if (e.code === "KeyR") {
-        game.resetLevel();
-      }
-      if (e.code === "KeyF") {
-        const dir = game.getForwardDirection();
-        game.tryThrow(dir.x, dir.z);
-      }
-    }
+    if (e.repeat || game.phase !== "playing") return;
+    if (e.code === "Space") game.tryPing();
+    if (e.code === "KeyQ") game.tryFocus();
+    if (e.code === "KeyE") game.tryBeacon();
+    if (e.code === "KeyR") game.resetLevel();
+    if (e.code === "KeyF") { const dir = game.getForwardDirection(); game.tryThrow(dir.x, dir.z); }
   });
-
-  window.addEventListener("keyup", (e) => {
-    keys.delete(e.code);
-  });
-
-  document.addEventListener("pointerlockchange", () => {
-    pointerLocked = document.pointerLockElement === game.renderer.domElement;
-  });
-
+  window.addEventListener("keyup", (e) => keys.delete(e.code));
+  document.addEventListener("pointerlockchange", () => { pointerLocked = document.pointerLockElement === game.renderer.domElement; });
   game.renderer.domElement.addEventListener("mousedown", (e) => {
     if (game.phase !== "playing") return;
-    if (e.button === 0) {
-      dragLook = true;
-      lastMouse = { x: e.clientX, y: e.clientY };
-      void game.renderer.domElement.requestPointerLock().catch(() => {});
-    }
+    if (e.button === 0) { dragLook = true; lastMouse = { x: e.clientX, y: e.clientY }; requestGamePointerLock(); }
   });
-
-  window.addEventListener("mouseup", () => {
-    dragLook = false;
-  });
-
+  window.addEventListener("mouseup", () => { dragLook = false; });
   window.addEventListener("mousemove", (e) => {
     if (game.phase !== "playing") return;
-    if (pointerLocked) {
-      game.addMouseLook(e.movementX, e.movementY);
-    } else if (dragLook) {
-      const dx = e.clientX - lastMouse.x;
-      const dy = e.clientY - lastMouse.y;
-      lastMouse = { x: e.clientX, y: e.clientY };
-      game.addMouseLook(dx, dy);
-    }
+    if (pointerLocked) game.addMouseLook(e.movementX, e.movementY);
+    else if (dragLook) { game.addMouseLook(e.clientX - lastMouse.x, e.clientY - lastMouse.y); lastMouse = { x: e.clientX, y: e.clientY }; }
   });
-
-  game.renderer.domElement.addEventListener(
-    "touchstart",
-    (e) => {
-      if (game.phase !== "playing") return;
-      if (e.touches.length === 1) {
-        const t = e.touches[0]!;
-        lastTouch = { x: t.clientX, y: t.clientY };
-      }
-    },
-    { passive: true },
-  );
-
-  window.addEventListener(
-    "touchmove",
-    (e) => {
-      if (game.phase !== "playing" || !lastTouch || e.touches.length !== 1) return;
-      const t = e.touches[0]!;
-      const dx = t.clientX - lastTouch.x;
-      const dy = t.clientY - lastTouch.y;
-      lastTouch = { x: t.clientX, y: t.clientY };
-      game.addMouseLook(dx * 1.35, dy * 1.35);
-      e.preventDefault();
-    },
-    { passive: false },
-  );
-
-  window.addEventListener("touchend", () => {
-    lastTouch = null;
-  });
-
-  game.renderer.domElement.addEventListener("contextmenu", (e) => {
+  game.renderer.domElement.addEventListener("touchstart", (e) => { if (game.phase === "playing" && e.touches.length === 1) { const t = e.touches[0]!; lastTouch = { x: t.clientX, y: t.clientY }; } }, { passive: true });
+  window.addEventListener("touchmove", (e) => {
+    if (game.phase !== "playing" || !lastTouch || e.touches.length !== 1) return;
+    const t = e.touches[0]!;
+    game.addMouseLook((t.clientX - lastTouch.x) * 1.35, (t.clientY - lastTouch.y) * 1.35);
+    lastTouch = { x: t.clientX, y: t.clientY };
     e.preventDefault();
-  });
-
-  document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "hidden" && game.phase === "playing") {
-      game.phase = "paused";
-      syncPanels();
-      document.exitPointerLock();
-    }
-  });
-
-  game.renderer.domElement.addEventListener("webglcontextlost", (e) => {
-    e.preventDefault();
-    root.innerHTML = `
-      <div class="fatal">
-        <h1>Graphics context lost</h1>
-        <p>The GPU reset or the tab slept too long. Reload the page to continue.</p>
-        <button type="button" id="ctx-reload">Reload</button>
-      </div>`;
-    root.querySelector("#ctx-reload")?.addEventListener("click", () => location.reload());
-  });
+  }, { passive: false });
+  window.addEventListener("touchend", () => { lastTouch = null; });
+  game.renderer.domElement.addEventListener("contextmenu", (e) => e.preventDefault());
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden" && game.phase === "playing") { game.phase = "paused"; syncPanels(); document.exitPointerLock(); } });
+  game.renderer.domElement.addEventListener("webglcontextlost", (e) => { e.preventDefault(); fatal(root, "Graphics context lost", "The GPU reset or the tab slept too long. Reload the page to continue."); });
 
   let last = performance.now();
   function frame(now: number): void {
     requestAnimationFrame(frame);
     const dt = Math.min(0.1, Math.max(0, (now - last) / 1000));
     last = now;
-
     const phaseBefore = game.phase;
     if (game.phase === "playing") {
-      const forward = keys.has("KeyW") || keys.has("ArrowUp");
-      const back = keys.has("KeyS") || keys.has("ArrowDown");
-      const left = keys.has("KeyA") || keys.has("ArrowLeft");
-      const right = keys.has("KeyD") || keys.has("ArrowRight");
-      const stealth = keys.has("ShiftLeft") || keys.has("ShiftRight");
-      game.tick(dt, forward, back, left, right, stealth);
-      hudTime.textContent = formatTimeShort(game.simulationTime);
-      const g = game.getPlayerGrid();
-      hudSector.textContent = `Sector ${g.ix},${g.iz}`;
-      meterRes.style.width = `${game.resonance}%`;
-      meterDebt.style.width = `${Math.min(100, game.echoDebt * 100)}%`;
+      game.tick(dt, keys.has("KeyW") || keys.has("ArrowUp"), keys.has("KeyS") || keys.has("ArrowDown"), keys.has("KeyA") || keys.has("ArrowLeft"), keys.has("KeyD") || keys.has("ArrowRight"), keys.has("ShiftLeft") || keys.has("ShiftRight"));
+      updateHud(game, ui, settings);
+      if (settings.playMode === "ghosts") mp.publish(game.getNetworkState(mp.localId, settings.playerName));
+      audio.updateTension(game.echoDebt, game.resonance);
     }
-
-    if (game.phase !== phaseBefore) {
-      if (game.phase === "won" || game.phase === "lost") {
-        document.exitPointerLock();
-      }
-      syncPanels();
-    }
-
+    if (game.phase !== phaseBefore) { if (game.phase === "won" || game.phase === "lost") document.exitPointerLock(); syncPanels(); }
     game.render();
   }
   requestAnimationFrame(frame);
-
-  window.addEventListener("resize", () => {
-    game.resize(window.innerWidth, window.innerHeight);
-  });
-
+  window.addEventListener("resize", () => game.resize(window.innerWidth, window.innerHeight));
   syncPanels();
+}
+
+function updateHud(game: Game, ui: UiRefs, settings: GameSettings): void {
+  ui.hudTime.textContent = formatTimeShort(game.simulationTime);
+  ui.missionChip.textContent = `Mission ${game.missionLevel}/${MAX_MISSION_LEVEL}`;
+  const g = game.getPlayerGrid();
+  ui.hudSector.textContent = `L${game.missionLevel} · Sector ${g.ix},${g.iz}`;
+  ui.hudObjective.textContent = game.getObjectiveText();
+  ui.meterRes.style.width = `${game.resonance}%`;
+  ui.meterDebt.style.width = `${Math.min(100, game.echoDebt * 100)}%`;
+  ui.keyChip.textContent = game.hasEchoKey ? "Key: held" : "Key: missing";
+  ui.keyChip.classList.toggle("good", game.hasEchoKey);
+  if (settings.showRadar) drawRadar(ui.radar, game.getRadarSnapshot(settings.visualAssist ? 12 : 9), settings.theme, settings.visualAssist);
+}
+
+function saveBestRun(time: number | null, phase: string, missionLevel: number): void {
+  if (phase !== "won" || !time) return;
+  try {
+    const key = `echo-maze-best-sec-l${missionLevel}`;
+    const raw = localStorage.getItem(key);
+    const best = raw ? Number(raw) : Infinity;
+    if (time < best) localStorage.setItem(key, String(time));
+  } catch { /* ignore */ }
 }

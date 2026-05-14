@@ -4,6 +4,16 @@
  */
 import { MAZE_HEIGHT_CELLS, MAZE_WIDTH_CELLS } from "./constants";
 
+export interface MazeOptions {
+  seed?: number;
+  width?: number;
+  height?: number;
+  enemyCount?: number;
+  hazardCount?: number;
+  wellCount?: number;
+  specialWallCount?: number;
+}
+
 export function mulberry32(seed: number): () => number {
   let a = seed >>> 0;
   return () => {
@@ -176,10 +186,11 @@ function farthestFloor(rows: string[], width: number, height: number, sx: number
  * Build a wide/tall maze string[] for `parseLevel`.
  * @param seed — deterministic if fixed; use `Date.now()` for variety.
  */
-export function generateEchoMaze(seed: number): string[] {
-  const rnd = mulberry32(seed);
-  const W = MAZE_WIDTH_CELLS;
-  const H = MAZE_HEIGHT_CELLS;
+export function generateEchoMaze(seedOrOptions: number | MazeOptions): string[] {
+  const opts: MazeOptions = typeof seedOrOptions === "number" ? { seed: seedOrOptions } : seedOrOptions;
+  const rnd = mulberry32(opts.seed ?? Date.now());
+  const W = opts.width ?? MAZE_WIDTH_CELLS;
+  const H = opts.height ?? MAZE_HEIGHT_CELLS;
   if (W % 2 === 0 || H % 2 === 0) throw new Error("Maze dimensions must be odd");
 
   const raw = carveMaze(W, H, rnd);
@@ -261,7 +272,7 @@ export function generateEchoMaze(seed: number): string[] {
     if (Math.hypot(x - spawnX, z - spawnZ) < 9) return false;
     return true;
   });
-  const hazardCount = Math.min(14, Math.max(6, Math.floor(floorCells.length * 0.004)));
+  const hazardCount = opts.hazardCount ?? Math.min(14, Math.max(6, Math.floor(floorCells.length * 0.004)));
   for (let i = 0; i < hazardCount && hazardPool.length > 0; i++) {
     const j = Math.floor(rnd() * hazardPool.length);
     const [x, z] = hazardPool.splice(j, 1)[0]!;
@@ -270,7 +281,7 @@ export function generateEchoMaze(seed: number): string[] {
 
   // Ringwells (floor only — never overlay hazards)
   const wellPool = floorCells.filter(([x, z]) => mut[z]![x] === ".");
-  const wellNeed = Math.min(24, Math.max(10, Math.floor(floorCells.length * 0.006)));
+  const wellNeed = opts.wellCount ?? Math.min(24, Math.max(10, Math.floor(floorCells.length * 0.006)));
   for (let i = 0; i < wellNeed && wellPool.length > 0; i++) {
     const j = Math.floor(rnd() * wellPool.length);
     const [x, z] = wellPool.splice(j, 1)[0]!;
@@ -298,8 +309,8 @@ export function generateEchoMaze(seed: number): string[] {
     const ch = mut[z]![x];
     if (ch === "." || ch === "=") mut[z]![x] = letter;
   };
-  if (far[0]) placeEnemy(far[0]!, "m");
-  if (far[1]) placeEnemy(far[1]!, "n");
+  const enemyNeed = opts.enemyCount ?? 2;
+  for (let i = 0; i < enemyNeed && i < far.length; i++) placeEnemy(far[i]!, i % 2 === 0 ? "m" : "n");
 
   // Absorb / decoy walls (touching open floor)
   const wallCandidates: [number, number][] = [];
@@ -327,7 +338,8 @@ export function generateEchoMaze(seed: number): string[] {
       if (touches) wallCandidates.push([x, z]);
     }
   }
-  for (let i = 0; i < 5 && wallCandidates.length > 0; i++) {
+  const specialNeed = opts.specialWallCount ?? 5;
+  for (let i = 0; i < specialNeed && wallCandidates.length > 0; i++) {
     const j = Math.floor(rnd() * wallCandidates.length);
     const [x, z] = wallCandidates.splice(j, 1)[0]!;
     mut[z]![x] = i % 2 === 0 ? "a" : "d";
