@@ -16,7 +16,7 @@ export function buildMissionLevel(
 ): { level: ParsedLevel; enemies: Enemy[]; landmarks: Landmark[]; seed: number } {
   let enemyCount = mission.enemyCount + difficulty.enemyCountAdd;
   if (mutator === "twin-hunt") enemyCount += 2;
-  const cfg = { ...mission, enemyCount: Math.min(10, enemyCount) };
+  const cfg = { ...mission, enemyCount: Math.min(16, enemyCount) };
   const level = parseLevel(generateEchoMaze(cfg));
   const enemies = level.enemies.map((e, i) => {
     const c = gridCenterWorld(e.ix, e.iz);
@@ -82,12 +82,11 @@ export function applyRestore(
   if (restore.beacons?.length) {
     target.beacons = restore.beacons.map((b) => ({ ...b }));
   }
-  if (restore.enemies?.length) {
-    const n = Math.min(target.enemies.length, restore.enemies.length);
-    for (let i = 0; i < n; i++) {
-      const snap = restore.enemies[i]!;
-      const e = target.enemies[i]!;
+  if (restore.enemies) {
+    target.enemies = restore.enemies.map((snap) => {
+      const e = makeEnemy(snap.x, snap.z, snap.kind);
       Object.assign(e, snap);
-    }
+      return e;
+    });
   }
 }

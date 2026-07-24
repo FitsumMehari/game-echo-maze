@@ -1,11 +1,14 @@
 import type { AudioEngine } from "@/audio/AudioEngine";
 import { THROW_STRENGTH } from "@/core/constants";
-import type { Beacon, Landmark, Projectile } from "@/core/types";
+import type { Beacon, Enemy, Landmark, Projectile } from "@/core/types";
 import { resolveEnemyCollision } from "@/game/collision";
 import type { NoiseKind } from "@/game/pulseSystem";
 import type { ParsedLevel } from "@/world/level";
 
 const PROJ_RADIUS = 0.12;
+
+/** Stone hit radius vs hunter body (projectile + enemy radii). */
+export const PROJECTILE_HIT_RADIUS = 0.42;
 
 export function updateProjectiles(
   projectiles: Projectile[],
@@ -36,6 +39,30 @@ export function updateProjectiles(
     if (p.bounces <= 8 && p.age <= 4.5) next.push(p);
   }
   return next;
+}
+
+/** Remove hunters hit by stones; consumed projectiles are dropped. */
+export function resolveProjectileKills(
+  projectiles: Projectile[],
+  enemies: Enemy[],
+  hitRadius = PROJECTILE_HIT_RADIUS,
+): { projectiles: Projectile[]; enemies: Enemy[]; kills: Enemy[] } {
+  if (!projectiles.length || !enemies.length) {
+    return { projectiles, enemies, kills: [] };
+  }
+  const kills: Enemy[] = [];
+  const aliveEnemies = [...enemies];
+  const kept: Projectile[] = [];
+  for (const p of projectiles) {
+    const hitIdx = aliveEnemies.findIndex((e) => Math.hypot(e.x - p.x, e.z - p.z) <= hitRadius);
+    if (hitIdx < 0) {
+      kept.push(p);
+      continue;
+    }
+    kills.push(aliveEnemies[hitIdx]!);
+    aliveEnemies.splice(hitIdx, 1);
+  }
+  return { projectiles: kept, enemies: aliveEnemies, kills };
 }
 
 export function updateBeacons(

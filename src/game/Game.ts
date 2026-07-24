@@ -3,7 +3,7 @@ import { EYE_HEIGHT, RESONANCE_HARMONIC_THRESHOLD } from "@/core/constants";
 import type { Beacon, Enemy, Landmark, Projectile, RadarSnapshot, RemotePeerState, RunStats } from "@/core/types";
 import { tryBeacon as doBeacon, tryFocus as doFocus, tryPing as doPing, tryThrow as doThrow } from "@/game/abilities";
 import { checkEndConditions } from "@/game/endCheck";
-import { impactPing, updateBeacons, updateLandmarks, updateProjectiles } from "@/game/entities";
+import { impactPing, resolveProjectileKills, updateBeacons, updateLandmarks, updateProjectiles } from "@/game/entities";
 import { eaterDampRadius, updateHunter } from "@/game/hunterAi";
 import { handleTileInteractions, isHiddenFromHunters, movePlayer, updateQuietEconomy } from "@/game/playerMove";
 import { createPulseUniforms, PulseSystem, type NoiseKind } from "@/game/pulseSystem";
@@ -227,6 +227,7 @@ export class Game {
     this.memoryExit = null;
     if (opts.restore) {
       applyRestore(this, opts.restore);
+      this.rebuildEnemyMeshes();
       if (this.doorOpen) this.rebuildWorldFromLevel();
     }
     this.emitPulse(this.playerX, 0.35, this.playerZ, 0.42, 10, 0.55, false);
@@ -299,6 +300,7 @@ export class Game {
     this.projectiles = updateProjectiles(this.projectiles, dt, this.level, this.doorOpen, (x, z) =>
       impactPing(this.audio, this.emitPulse.bind(this), x, z),
     );
+    this.resolveStoneKills();
     this.beacons = updateBeacons(
       this.beacons,
       dt,
@@ -320,6 +322,18 @@ export class Game {
   setCheckpoint(x: number, z: number): void {
     this.spawnX = x;
     this.spawnZ = z;
+  }
+
+  private resolveStoneKills(): void {
+    const result = resolveProjectileKills(this.projectiles, this.enemies);
+    if (!result.kills.length) return;
+    this.projectiles = result.projectiles;
+    this.enemies = result.enemies;
+    this.rebuildEnemyMeshes();
+    for (const e of result.kills) {
+      this.emitPulse(e.x, 0.35, e.z, 0.55, 10, 0.4, true, "stone");
+      this.audio.playEnemyDown(e.x - this.playerX, e.z - this.playerZ);
+    }
   }
 
   private updateEnemies(dt: number): void {

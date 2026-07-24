@@ -43,7 +43,7 @@ export const DIFFICULTIES: DifficultyProfile[] = [
     catchRadiusMul: 1.08,
     heatDecayMul: 0.72,
     heatGainMul: 1.28,
-    enemyCountAdd: 1,
+    enemyCountAdd: 2,
     resonanceGainMul: 0.9,
   },
 ];

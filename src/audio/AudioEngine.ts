@@ -318,6 +318,10 @@ export class AudioEngine {
   playThrow(): void {
     this.noise(0.04, 0.4, 2600);
   }
+  playEnemyDown(dx = 0, dz = 0): void {
+    this.slide(280, 70, 0.28, "sawtooth", 0.14);
+    this.noise(0.1, 0.35, 900, dx, dz);
+  }
   playHazard(): void {
     this.slide(140, 40, 0.4, "sawtooth", 0.2);
   }

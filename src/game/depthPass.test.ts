@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { makeEnemy, updateHunter } from "@/game/hunterAi";
+import { resolveProjectileKills } from "@/game/entities";
 import { findPath, nextWaypoint, spiralOffset } from "@/game/pathfinding";
 import { resolvePlayerCollision, cellBlocks } from "@/game/collision";
 import { parseLevel, Cell, getCell } from "@/world/level";
@@ -139,6 +140,18 @@ describe("enemy snapshot", () => {
     expect(snap.kind).toBe("eater");
     expect(snap.state).toBe("chase");
     expect(snap.x).toBe(2);
+  });
+});
+
+describe("stone kills", () => {
+  it("removes hunters hit by projectiles", () => {
+    const enemies = [makeEnemy(1, 1, "stalker"), makeEnemy(5, 5, "ambusher")];
+    const projectiles = [{ x: 1.1, z: 1.05, vx: 0, vz: 0, bounces: 0, age: 0.1 }];
+    const result = resolveProjectileKills(projectiles, enemies);
+    expect(result.kills).toHaveLength(1);
+    expect(result.enemies).toHaveLength(1);
+    expect(result.enemies[0]!.kind).toBe("ambusher");
+    expect(result.projectiles).toHaveLength(0);
   });
 });
 

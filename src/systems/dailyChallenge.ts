@@ -25,7 +25,7 @@ export function getDailyMission(d = new Date()): MissionConfig {
     seed,
     title: `Daily ${dailyKey(d)}`,
     briefing: "Shared seed challenge — same maze for everyone today. Beat your time and share it.",
-    enemyCount: Math.min(8, base.enemyCount + 1),
+    enemyCount: Math.min(16, base.enemyCount + 2),
   };
 }
 

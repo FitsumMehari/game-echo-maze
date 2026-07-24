@@ -63,7 +63,7 @@ export function getMissionConfig(levelRaw: number): MissionConfig {
   const t = (level - 1) / (MAX_MISSION_LEVEL - 1);
   const width = odd(23 + t * 56);
   const height = odd(21 + t * 58);
-  const enemyCount = Math.min(8, 1 + Math.floor((level - 1) / 5));
+  const enemyCount = Math.min(14, 3 + Math.floor((level - 1) / 2));
   const hazardCount = Math.round(2 + t * 24 + Math.max(0, level - 12) * 0.35);
   const wellCount = Math.round(7 + t * 25);
   const specialWallCount = Math.round(2 + t * 12);
