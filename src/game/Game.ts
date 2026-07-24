@@ -3,7 +3,7 @@ import { EYE_HEIGHT, RESONANCE_HARMONIC_THRESHOLD } from "@/core/constants";
 import type { Beacon, Enemy, Landmark, Projectile, RadarSnapshot, RemotePeerState, RunStats } from "@/core/types";
 import { tryBeacon as doBeacon, tryFocus as doFocus, tryPing as doPing, tryThrow as doThrow } from "@/game/abilities";
 import { checkEndConditions } from "@/game/endCheck";
-import { impactPing, resolveProjectileKills, updateBeacons, updateLandmarks, updateProjectiles } from "@/game/entities";
+import { impactPing, updateBeacons, updateLandmarks, updateProjectiles } from "@/game/entities";
 import { eaterDampRadius, updateHunter } from "@/game/hunterAi";
 import { handleTileInteractions, isHiddenFromHunters, movePlayer, updateQuietEconomy } from "@/game/playerMove";
 import { createPulseUniforms, PulseSystem, type NoiseKind } from "@/game/pulseSystem";
@@ -87,6 +87,11 @@ export class Game {
   private readonly ghostMeshes = new Map<string, THREE.Mesh>();
   private readonly remotePeers = new Map<string, RemotePeerState>();
   private readonly enemyGeometry = buildEchoSphere(ENEMY_RADIUS, 9);
+  private readonly enemyMaterial = new THREE.MeshBasicMaterial({
+    color: 0xff5a4a,
+    transparent: true,
+    opacity: 0.92,
+  });
   private readonly projectileGeometry = buildEchoSphere(PROJ_RADIUS, 10);
   private readonly ghostGeometry = buildEchoSphere(0.22, 13);
   private readonly beaconGeometry = buildEchoSphere(BEACON_RADIUS, 14);
@@ -164,8 +169,10 @@ export class Game {
     this.enemyMeshes.forEach((m) => this.scene.remove(m));
     this.enemyMeshes.length = 0;
     this.enemies.forEach((e) => {
-      const m = this.addSphere(this.enemyGeometry);
-      m.position.set(e.x, ENEMY_RADIUS + 0.02, e.z);
+      const m = new THREE.Mesh(this.enemyGeometry, this.enemyMaterial);
+      m.frustumCulled = false;
+      m.position.set(e.x, ENEMY_RADIUS + 0.08, e.z);
+      this.scene.add(m);
       this.enemyMeshes.push(m);
     });
   }
@@ -297,10 +304,23 @@ export class Game {
     movePlayer(this, dt, forward, back, left, right, stealth);
     updateQuietEconomy(this, dt, stealth);
     this.updateEnemies(dt);
-    this.projectiles = updateProjectiles(this.projectiles, dt, this.level, this.doorOpen, (x, z) =>
-      impactPing(this.audio, this.emitPulse.bind(this), x, z),
+    const shot = updateProjectiles(
+      this.projectiles,
+      dt,
+      this.level,
+      this.doorOpen,
+      (x, z) => impactPing(this.audio, this.emitPulse.bind(this), x, z),
+      this.enemies,
     );
-    this.resolveStoneKills();
+    this.projectiles = shot.projectiles;
+    if (shot.kills.length) {
+      this.enemies = shot.enemies;
+      this.rebuildEnemyMeshes();
+      for (const e of shot.kills) {
+        this.emitPulse(e.x, 0.35, e.z, 0.7, 11, 0.45, true, "stone");
+        this.audio.playEnemyDown(e.x - this.playerX, e.z - this.playerZ);
+      }
+    }
     this.beacons = updateBeacons(
       this.beacons,
       dt,
@@ -322,18 +342,6 @@ export class Game {
   setCheckpoint(x: number, z: number): void {
     this.spawnX = x;
     this.spawnZ = z;
-  }
-
-  private resolveStoneKills(): void {
-    const result = resolveProjectileKills(this.projectiles, this.enemies);
-    if (!result.kills.length) return;
-    this.projectiles = result.projectiles;
-    this.enemies = result.enemies;
-    this.rebuildEnemyMeshes();
-    for (const e of result.kills) {
-      this.emitPulse(e.x, 0.35, e.z, 0.55, 10, 0.4, true, "stone");
-      this.audio.playEnemyDown(e.x - this.playerX, e.z - this.playerZ);
-    }
   }
 
   private updateEnemies(dt: number): void {
@@ -358,7 +366,7 @@ export class Game {
         pathOn,
         () => this.audio.playLoseInterest(e.x - this.playerX, e.z - this.playerZ),
       );
-      this.enemyMeshes[i]?.position.set(e.x, ENEMY_RADIUS + 0.02, e.z);
+      this.enemyMeshes[i]?.position.set(e.x, ENEMY_RADIUS + 0.08, e.z);
       this.audio.playHunterPresence(e.x - this.playerX, e.z - this.playerZ, e.state, e.kind);
     }
   }
@@ -516,6 +524,7 @@ export class Game {
   dispose(): void {
     this.mesh.geometry.dispose();
     [this.enemyGeometry, this.projectileGeometry, this.ghostGeometry, this.beaconGeometry].forEach((g) => g.dispose());
+    this.enemyMaterial.dispose();
     this.material.dispose();
     this.renderer.dispose();
     this.ghostMeshes.forEach((m) => this.scene.remove(m));

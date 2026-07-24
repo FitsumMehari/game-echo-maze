@@ -7,8 +7,18 @@ import type { ParsedLevel } from "@/world/level";
 
 const PROJ_RADIUS = 0.12;
 
-/** Stone hit radius vs hunter body (projectile + enemy radii). */
-export const PROJECTILE_HIT_RADIUS = 0.42;
+/** Generous stone vs hunter body — stones are meant to be a reliable takedown. */
+export const PROJECTILE_HIT_RADIUS = 0.85;
+
+/** Closest distance from point C to segment AB. */
+export function distPointToSegment(ax: number, az: number, bx: number, bz: number, cx: number, cz: number): number {
+  const dx = bx - ax;
+  const dz = bz - az;
+  const len2 = dx * dx + dz * dz;
+  let t = len2 < 1e-8 ? 0 : ((cx - ax) * dx + (cz - az) * dz) / len2;
+  t = Math.max(0, Math.min(1, t));
+  return Math.hypot(ax + t * dx - cx, az + t * dz - cz);
+}
 
 export function updateProjectiles(
   projectiles: Projectile[],
@@ -16,32 +26,61 @@ export function updateProjectiles(
   level: ParsedLevel,
   doorOpen: boolean,
   onImpact: (x: number, z: number) => void,
-): Projectile[] {
+  enemies: Enemy[] = [],
+  hitRadius = PROJECTILE_HIT_RADIUS,
+): { projectiles: Projectile[]; enemies: Enemy[]; kills: Enemy[] } {
+  const alive = [...enemies];
+  const kills: Enemy[] = [];
   const next: Projectile[] = [];
+
   for (const p of projectiles) {
     p.age += dt;
     let { x, z, vx, vz } = p;
-    const rx = resolveEnemyCollision(level, x + vx * dt, z, PROJ_RADIUS, doorOpen).x;
-    if (Math.abs(rx - (x + vx * dt)) > 1e-5) {
-      vx *= -0.72;
-      x = rx;
-      p.bounces++;
-      onImpact(x, z);
-    } else x += vx * dt;
-    const rz = resolveEnemyCollision(level, x, z + vz * dt, PROJ_RADIUS, doorOpen).z;
-    if (Math.abs(rz - (z + vz * dt)) > 1e-5) {
-      vz *= -0.72;
-      z = rz;
-      p.bounces++;
-      onImpact(x, z);
-    } else z += vz * dt;
+
+    // Sub-step so fast stones cannot tunnel through hunters or thin corridors
+    const steps = Math.max(1, Math.ceil((Math.hypot(vx, vz) * dt) / 0.2));
+    const stepDt = dt / steps;
+    let consumed = false;
+
+    for (let s = 0; s < steps && !consumed; s++) {
+      const prevX = x;
+      const prevZ = z;
+      const rx = resolveEnemyCollision(level, x + vx * stepDt, z, PROJ_RADIUS, doorOpen).x;
+      if (Math.abs(rx - (x + vx * stepDt)) > 1e-5) {
+        vx *= -0.72;
+        x = rx;
+        p.bounces++;
+        onImpact(x, z);
+      } else x += vx * stepDt;
+      const rz = resolveEnemyCollision(level, x, z + vz * stepDt, PROJ_RADIUS, doorOpen).z;
+      if (Math.abs(rz - (z + vz * stepDt)) > 1e-5) {
+        vz *= -0.72;
+        z = rz;
+        p.bounces++;
+        onImpact(x, z);
+      } else z += vz * stepDt;
+
+      const hitIdx = alive.findIndex((e) => distPointToSegment(prevX, prevZ, x, z, e.x, e.z) <= hitRadius);
+      if (hitIdx >= 0) {
+        kills.push(alive[hitIdx]!);
+        alive.splice(hitIdx, 1);
+        consumed = true;
+        // Snap impact to hunter for feedback
+        const dead = kills[kills.length - 1]!;
+        x = dead.x;
+        z = dead.z;
+        onImpact(x, z);
+      }
+    }
+
     Object.assign(p, { x, z, vx, vz });
-    if (p.bounces <= 8 && p.age <= 4.5) next.push(p);
+    if (!consumed && p.bounces <= 8 && p.age <= 4.5) next.push(p);
   }
-  return next;
+
+  return { projectiles: next, enemies: alive, kills };
 }
 
-/** Remove hunters hit by stones; consumed projectiles are dropped. */
+/** Remove hunters hit by stones at rest (or after a move). Prefer updateProjectiles path. */
 export function resolveProjectileKills(
   projectiles: Projectile[],
   enemies: Enemy[],

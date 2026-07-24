@@ -293,7 +293,7 @@ export function generateEchoMaze(seedOrOptions: number | MazeOptions): string[] 
     if (mut[z]![x] === ".") mut[z]![x] = "=";
   }
 
-  // Enemies — far from spawn (re-scan after hazards / wells)
+  // Enemies — spread around the maze (not all stacked at the far corner)
   const enemyPool: [number, number][] = [];
   for (let z = 1; z < H - 1; z++) {
     for (let x = 1; x < W - 1; x++) {
@@ -301,13 +301,17 @@ export function generateEchoMaze(seedOrOptions: number | MazeOptions): string[] 
       if (c === "." || c === "=") enemyPool.push([x, z]);
     }
   }
-  const far = enemyPool
-    .filter(([x, z]) => Math.hypot(x - spawnX, z - spawnZ) > 18)
+  const mapSpan = Math.hypot(W, H);
+  const minDist = Math.max(5, Math.min(12, Math.floor(mapSpan * 0.22)));
+  const candidates = enemyPool
+    .filter(([x, z]) => Math.hypot(x - spawnX, z - spawnZ) >= minDist)
     .sort((a, b) => {
+      // Mix near-mid and far so early missions still feel crowded
       const da = Math.hypot(a[0] - spawnX, a[1] - spawnZ);
       const db = Math.hypot(b[0] - spawnX, b[1] - spawnZ);
-      return db - da;
+      return Math.abs(da - mapSpan * 0.35) - Math.abs(db - mapSpan * 0.35);
     });
+  const fallback = enemyPool.filter(([x, z]) => Math.hypot(x - spawnX, z - spawnZ) >= 3).sort(() => rnd() - 0.5);
 
   const placeEnemy = (pair: [number, number], letter: "m" | "n") => {
     const [x, z] = pair;
@@ -315,7 +319,19 @@ export function generateEchoMaze(seedOrOptions: number | MazeOptions): string[] 
     if (ch === "." || ch === "=") mut[z]![x] = letter;
   };
   const enemyNeed = opts.enemyCount ?? 2;
-  for (let i = 0; i < enemyNeed && i < far.length; i++) placeEnemy(far[i]!, i % 2 === 0 ? "m" : "n");
+  const placed: [number, number][] = [];
+  const tryPlace = (pool: [number, number][]) => {
+    for (const cell of pool) {
+      if (placed.length >= enemyNeed) break;
+      const [x, z] = cell;
+      if (mut[z]![x] !== "." && mut[z]![x] !== "=") continue;
+      if (placed.some(([px, pz]) => Math.hypot(px - x, pz - z) < 4)) continue;
+      placeEnemy(cell, placed.length % 2 === 0 ? "m" : "n");
+      placed.push(cell);
+    }
+  };
+  tryPlace(candidates);
+  if (placed.length < enemyNeed) tryPlace(fallback);
 
   // Hide niches — dead-end-ish floors not on main path
   const hidePool = floorCells.filter(([x, z]) => mut[z]![x] === "." && !pathSet.has(idx(x, z)));

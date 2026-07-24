@@ -111,7 +111,12 @@ export function wireLookControls(
     if (e.button === 0) {
       state.dragLook = true;
       state.lastMouse = { x: e.clientX, y: e.clientY };
-      requestLock();
+      if (state.pointerLocked) {
+        const dir = game.getForwardDirection();
+        game.tryThrow(dir.x, dir.z);
+      } else {
+        requestLock();
+      }
     }
   });
   window.addEventListener("mouseup", () => {

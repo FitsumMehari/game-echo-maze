@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { makeEnemy, updateHunter } from "@/game/hunterAi";
-import { resolveProjectileKills } from "@/game/entities";
+import { resolveProjectileKills, updateProjectiles } from "@/game/entities";
 import { findPath, nextWaypoint, spiralOffset } from "@/game/pathfinding";
 import { resolvePlayerCollision, cellBlocks } from "@/game/collision";
 import { parseLevel, Cell, getCell } from "@/world/level";
@@ -152,6 +152,21 @@ describe("stone kills", () => {
     expect(result.enemies).toHaveLength(1);
     expect(result.enemies[0]!.kind).toBe("ambusher");
     expect(result.projectiles).toHaveLength(0);
+  });
+
+  it("hits when a fast stone tunnels past a hunter", () => {
+    const enemies = [makeEnemy(2, 0, "stalker")];
+    // One frame at speed 14 would land at ~2.7 — swept path must still kill
+    const shot = updateProjectiles(
+      [{ x: 1.0, z: 0, vx: 14, vz: 0, bounces: 0, age: 0 }],
+      0.05,
+      parseLevel(["WWWWW", "W...W", "WWWWW"]),
+      true,
+      () => undefined,
+      enemies,
+    );
+    expect(shot.kills).toHaveLength(1);
+    expect(shot.enemies).toHaveLength(0);
   });
 });
 

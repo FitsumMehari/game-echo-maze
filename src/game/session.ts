@@ -16,7 +16,7 @@ export function buildMissionLevel(
 ): { level: ParsedLevel; enemies: Enemy[]; landmarks: Landmark[]; seed: number } {
   let enemyCount = mission.enemyCount + difficulty.enemyCountAdd;
   if (mutator === "twin-hunt") enemyCount += 2;
-  const cfg = { ...mission, enemyCount: Math.min(16, enemyCount) };
+  const cfg = { ...mission, enemyCount: Math.min(18, enemyCount) };
   const level = parseLevel(generateEchoMaze(cfg));
   const enemies = level.enemies.map((e, i) => {
     const c = gridCenterWorld(e.ix, e.iz);
