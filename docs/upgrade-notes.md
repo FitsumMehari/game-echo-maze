@@ -43,3 +43,8 @@ I treated the game as a sonar-stealth browser game and borrowed product patterns
 - Begin Mission now starts gameplay before attempting Web Audio unlock or pointer lock.
 - Audio unlock and pointer lock are optional, guarded fallbacks so restricted browsers cannot block single-player mode.
 - Settings no longer create an AudioContext before the first user gesture.
+
+## July 24, 2026 modular Overdrive depth pass
+
+- Flat `src/*.ts` modules moved under `app/`, `audio/`, `core/`, `game/`, `net/`, `systems/`, `ui/`, `world/`.
+- Pages CI keeps the prior `npm ci` + `npm run build` deploy path; lint/test/e2e run as separate jobs.
