@@ -47,12 +47,24 @@
 * {
   box-sizing: border-box;
 }
+html {
+  height: 100%;
+  overflow: hidden;
+}
 html,
 body {
   margin: 0;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  max-height: 100dvh;
   background: var(--bg-deep);
   color: var(--text);
+  overscroll-behavior: none;
+}
+body {
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
 }
 button,
 input,
@@ -70,21 +82,22 @@ select:focus-visible {
 }
 #app {
   width: 100%;
-  min-height: 100svh;
+  height: 100%;
+  overflow: hidden;
 }
 
 /* —— World frame —— */
 .game-wrap {
   position: relative;
   width: 100%;
-  min-height: 100svh;
+  height: 100%;
   overflow: hidden;
   background: var(--bg);
 }
 .game-wrap canvas:not(.radar) {
   display: block;
   width: 100%;
-  height: 100svh;
+  height: 100%;
   touch-action: none;
 }
 .game-wrap::before {
@@ -436,7 +449,10 @@ select:focus-visible {
   backdrop-filter: blur(14px) saturate(1.1);
   z-index: 6;
   padding: 20px 16px;
+  overflow-x: hidden;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
 }
 .overlay::before {
   content: "";
@@ -464,8 +480,10 @@ select:focus-visible {
 .panel {
   position: relative;
   width: min(440px, 100%);
-  max-height: calc(100svh - 32px);
+  max-height: calc(100dvh - 32px);
   overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
   padding: 28px 26px 24px;
   border-radius: 20px;
   border: 1px solid var(--border);
@@ -747,7 +765,8 @@ select:focus-visible {
 }
 
 .fatal {
-  min-height: 100svh;
+  min-height: 100%;
+  height: 100%;
   display: grid;
   place-content: center;
   gap: 14px;
@@ -755,6 +774,7 @@ select:focus-visible {
   text-align: center;
   color: var(--text);
   font-family: var(--font-display);
+  overflow: auto;
 }
 .fatal h1 {
   margin: 0;
