@@ -1,0 +1,17 @@
+{
+  "name": "Echo Maze Overdrive",
+  "short_name": "Echo Maze",
+  "description": "First-person sonar stealth maze — sound is sight.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#050714",
+  "theme_color": "#06050c",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
